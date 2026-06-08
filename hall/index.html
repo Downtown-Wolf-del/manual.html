@@ -1,12 +1,32 @@
-<div class="container">
-    <h1>ホール業務マニュアル・ポータル</h1>
-    <p>ここから各マニュアルを選択してください。</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ホール業務マニュアル・ポータル | 下町ウルフ</title>
+    <style>
+        body { font-family: sans-serif; background: #1a1a1a; color: #eee; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; background: #2a2a2a; padding: 30px; border-radius: 15px; }
+        h1 { color: #c5a059; text-align: center; }
+        .menu-grid { display: grid; gap: 15px; margin-top: 30px; }
+        .btn { padding: 20px; color: white; text-decoration: none; border-radius: 8px; text-align: center; font-weight: bold; }
+        .btn-main { background: #c5a059; }
+        .btn-sub { background: #333; }
+        .btn-back { background: #555; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ホール業務マニュアル・ポータル</h1>
+        <p style="text-align:center;">ここから各マニュアルを選択してください。</p>
 
-    <div class="menu-grid" style="display: grid; gap: 15px; margin-top: 30px;">
-    <a href="guide.html" style="padding: 20px; background: #c5a059; color: white; text-decoration: none; border-radius: 8px; text-align: center;">お客様ご案内マニュアル</a>
-    
-    <a href="food.html" style="padding: 20px; background: #333; color: white; text-decoration: none; border-radius: 8px; text-align: center;">フード略語集</a>
-    <a href="drink.html" style="padding: 20px; background: #333; color: white; text-decoration: none; border-radius: 8px; text-align: center;">ドリンク略語集</a>
-    
-    <a href="service.html" style="padding: 20px; background: #333; color: white; text-decoration: none; border-radius: 8px; text-align: center;">接客マニュアル</a>
-</div>
+        <div class="menu-grid">
+            <a href="guide.html" class="btn btn-main">お客様ご案内マニュアル</a>
+            <a href="food.html" class="btn btn-sub">フード略語集</a>
+            <a href="drink.html" class="btn btn-sub">ドリンク略語集</a>
+            <a href="service.html" class="btn btn-sub">接客マニュアル</a>
+            
+            <a href="index.html" class="btn btn-back">トップページ（ポータル）へ戻る</a>
+        </div>
+    </div>
+</body>
+</html>
