@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <title>下町ウルフ | 研修ポータル</title>
     <style>
-        body { background: #1a1a1a; color: #fff; font-family: 'Helvetica Neue', sans-serif; text-align: center; padding: 50px; }
+      body { 
+            margin: 0; 
+            padding: 50px; 
+            font-family: 'Helvetica Neue', sans-serif; 
+            text-align: center; 
+            /* 背景画像の設定 */
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('2025_10_24_ウルフB-31.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed;
+            color: #fff; 
+            min-height: 100vh;
+        }
+        
         h1 { font-size: 3rem; color: #c5a059; margin-bottom: 10px; }
         .hero { margin-bottom: 50px; border-bottom: 2px solid #c5a059; padding-bottom: 20px; }
         .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; }
-        .card { background: #333; padding: 30px; border-radius: 15px; text-decoration: none; color: #fff; transition: 0.3s; }
+        .card { background: rgba(51, 51, 51, 0.8); padding: 30px; border-radius: 15px; text-decoration: none; color: #fff; transition: 0.3s; }
         .card:hover { background: #c5a059; color: #000; transform: translateY(-10px); }
         h2 { margin: 0; font-size: 1.5rem; }
     </style>
