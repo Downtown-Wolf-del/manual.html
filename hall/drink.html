@@ -2,67 +2,376 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>ドリンク単品略語表 | 下町ウルフ</title>
+    <title>ドリンク略語・伝票マニュアル | 下町ウルフ</title>
     <style>
-        body { font-family: sans-serif; background: #1a1a1a; color: #eee; padding: 15px; line-height: 1.4; }
-        .container { max-width: 900px; margin: 0 auto; background: #2a2a2a; padding: 20px; border-radius: 10px; }
-        h1 { color: #c5a059; border-bottom: 2px solid #c5a059; padding-bottom: 10px; text-align: center; font-size: 1.5rem; }
-        h2 { color: #ff9800; margin-top: 30px; font-size: 1.2rem; border-left: 4px solid #ff9800; padding-left: 10px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.9rem; }
-        th, td { border: 1px solid #444; padding: 8px; text-align: left; }
-        th { background: #333; color: #c5a059; }
-        .np { display: block; color: #aaa; font-size: 0.8rem; }
-        .note { font-size: 0.8rem; color: #888; }
-        .back-link { display: block; margin-top: 30px; text-align: center; color: #c5a059; text-decoration: none; font-weight: bold; }
+        body { 
+            margin: 0; padding: 20px; font-family: sans-serif; color: #fff; line-height: 1.6;
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('2025_11_18_ウルフ1379-6.jpg');
+            background-size: cover; background-position: center; background-attachment: fixed;
+        }
+        .container { max-width: 800px; margin: 0 auto; background: rgba(42, 42, 42, 0.9); padding: 30px; border-radius: 15px; border-top: 5px solid #c5a059; }
+        h1 { color: #c5a059; text-align: center; }
+        h2 { color: #c5a059; border-bottom: 2px solid #c5a059; margin-top: 40px; padding-bottom: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th { background: #333; color: #c5a059; padding: 12px; text-align: left; }
+        td { border-bottom: 1px solid #555; padding: 12px; vertical-align: top; }
+        .np { display: block; color: #aaa; font-size: 0.85rem; }
+        .eng { display: block; color: #888; font-size: 0.8rem; }
+        .back-link { display: block; margin-top: 40px; text-align: center; color: #c5a059; text-decoration: none; font-weight: bold; background: #333; padding: 15px; border-radius: 8px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>ドリンク単品略語表 (पेय पदार्थ छोटकरी)</h1>
+        <h1>ドリンク略語・伝票マニュアル</h1>
 
-        <h2>【共通ワード】 (सामान्य शब्दहरू)</h2>
+        <h2>【重要】伝票共通ワード</h2>
         <table>
-            <tr><th>メニュー名</th><th>略語</th></tr>
-            <tr><td>ロック <span class="np">बरफ मात्र</span></td><td>R</td></tr>
-            <tr><td>水割り <span class="np">पानी मसाएको</span></td><td>水</td></tr>
-            <tr><td>お湯割り <span class="np">तातो पानी</span></td><td>ゆ</td></tr>
-            <tr><td>ソーダ割り <span class="np">सोडा मसाएको</span></td><td>ソーダ / S</td></tr>
-            <tr><td>お茶割り <span class="np">चिया मसाएको</span></td><td>H</td></tr>
+            <tr><th>飲み方・注文方法</th><th>略語伝票記入</th><th>備考</th></tr>
+            <tr><td>ロック<br><span class="np">बरफ मात्र</span><span class="eng">Ice only</span></td><td><strong>R</strong></td><td>例：黒霧R、いもR</td></tr>
+            <tr><td>水割り<br><span class="np">पानी मिसाएको</span><span class="eng">Mixed with water</span></td><td><strong>水</strong></td><td>例：いも水、むぎ水</td></tr>
+            <tr><td>お湯割り<br><span class="np">तातो पानी</span><span class="eng">Hot water</span></td><td><strong>ゆ</strong></td><td>例：山猿ゆ</td></tr>
+            <tr><td>ソーダ割り<br><span class="np">सोडा मिसाएको</span><span class="eng">Soda</span></td><td><strong>ソーダ / S</strong></td><td>例：カシスS</td></tr>
+            <tr><td>お茶割り<br><span class="np">चिया मिसाएको</span><span class="eng">Mixed with tea</span></td><td><strong>H</strong></td><td>例：ウーH、緑H</td></tr>
+            <tr><td>ストレート<br><span class="np">सोझै</span><span class="eng">Straight</span></td><td><strong>スト</strong></td><td>例：角スト</td></tr>
+            <tr><td>氷なし<br><span class="np">बरफ बिना</span><span class="eng">No Ice</span></td><td><strong>氷なし</strong></td><td>-</td></tr>
+            <tr><td>濃いめ<br><span class="np">कडा</span><span class="eng">Strong</span></td><td><strong>こいめ</strong></td><td>例：角HBこいめ</td></tr>
+            <tr><td>薄め<br><span class="np">हल्का</span><span class="eng">Light</span></td><td><strong>うすめ</strong></td><td>-</td></tr>
+            <tr><td>ピッチャー<br><span class="np">पिचर</span><span class="eng">Pitcher</span></td><td><strong>P</strong></td><td>例：生P</td></tr>
+            <tr><td>サービス水・チェイサー<br><span class="np">पानी</span><span class="eng">Water (Chaser)</span></td><td><strong>水、チェイサー</strong></td><td>-</td></tr>
+        </table>
+        <h2>ビール・ハイボール</h2>
+        <table>
+            <tr><th>メニュー名</th><th>略語伝票記入</th><th>備考</th></tr>
+            <tr>
+                <td>生ビール<br><span class="np">ड्राफ्ट बयर</span><span class="eng">Draft Beer</span></td>
+                <td><strong>生</strong></td>
+                <td>生ジョッキは「生」</td>
+            </tr>
+            <tr>
+                <td>瓶ビール<br><span class="np">बोतल बयर</span><span class="eng">Bottled Beer</span></td>
+                <td><strong>ビンビ</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>角ハイボール<br><span class="np">हाइबल</span><span class="eng">Highball</span></td>
+                <td><strong>角HB</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>コーラ角ハイボール<br><span class="np">कोकाकोला काकु हाइबल</span><span class="eng">Cola Kaku Highball</span></td>
+                <td><strong>コーラ角HB</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>ジンジャーエール角ハイ<br><span class="np">अदुवा सोडा काकु हाइबल</span><span class="eng">Ginger Ale Kaku Highball</span></td>
+                <td><strong>GA角HB</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>レモン角ハイボール<br><span class="np">लेमन काकु हाइबल</span><span class="eng">Lemon Kaku Highball</span></td>
+                <td><strong>レモン角HB</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>シークワーサー角ハイボール<br><span class="np">सकाकुवासा काकु हाइबल</span><span class="eng">Shekwasha Kaku Highball</span></td>
+                <td><strong>シーク角HB</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>メロン角ハイボール<br><span class="np">खरबुजा काकु हाइबल</span><span class="eng">Melon Kaku Highball</span></td>
+                <td><strong>メロン角HB</strong></td>
+            </tr>
+            <tr>
+                <td>ライム角ハイボール<br><span class="np">कागती काकु हाइबल</span><span class="eng">Lime Kaku Highball</span></td>
+                <td><strong>ライム角HB</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>ラムネ角ハイボール<br><span class="np">रामुने काकु हाइबल</span><span class="eng">Ramune Kaku Highball</span></td>
+                <td><strong>ラムネ角HB</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>ゆず角ハイボール<br><span class="np">युजु काकु हाइबल</span><span class="eng">Yuzu Kaku Highball</span></td>
+                <td><strong>ゆず角HB</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>リアルゴールド角ハイボール<br><span class="np">リアルゴールド काकु हाइबल</span><span class="eng">Real Gold Kaku Highball</span></td>
+                <td><strong>リアル角HB</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>巨峰角ハイボール<br><span class="np">क्योहो काकु हाइबल</span><span class="eng">Kyoho Grape Kaku Highball</span></td>
+                <td><strong>きょほう角HB</strong></td>
+                <td>-</td>
+            </tr>
+            <h2>ジムビームハイボール</h2>
+        <table>
+            <tr><th>メニュー名</th><th>略語伝票記入</th></tr>
+            <tr>
+                <td>ジムビームハイボール<br><span class="np">जम बिम हाइबल</span><span class="eng">Jim Beam Highball</span></td>
+                <td><strong>HB</strong></td>
+            </tr>
+            <tr>
+                <td>コーラジムビームハイボール<br><span class="np">कोकाकोला जम बिम हाइबल</span><span class="eng">Cola Jim Beam Highball</span></td>
+                <td><strong>コーラHB</strong></td>
+            </tr>
+            <tr>
+                <td>ジンジャーエールジムビームハイボール<br><span class="np">अदुवा सोडा जम बिम हाइबल</span><span class="eng">Ginger Ale Jim Beam Highball</span></td>
+                <td><strong>GAHB</strong></td>
+            </tr>
+            <tr>
+                <td>レモンジムビームハイボール<br><span class="np">लेमन जम बिम हाइबल</span><span class="eng">Lemon Jim Beam Highball</span></td>
+                <td><strong>レモンHB</strong></td>
+            </tr>
+            <tr>
+                <td>シークワーサージムビームハイボール<br><span class="np">सकाकुवासा जम बिम हाइबल</span><span class="eng">Shekwasha Jim Beam Highball</span></td>
+                <td><strong>シークHB</strong></td>
+            </tr>
+            <tr>
+                <td>メロンジムビームハイボール<br><span class="np">खरबुजा जम बिम हाइबल</span><span class="eng">Melon Jim Beam Highball</span></td>
+                <td><strong>メロンHB</strong></td>
+            </tr>
+            <tr>
+                <td>ライムジムビームハイボール<br><span class="np">कागती जम बिम हाइबल</span><span class="eng">Lime Jim Beam Highball</span></td>
+                <td><strong>ライムHB</strong></td>
+            </tr>
+            <tr>
+                <td>ラムネジムビームハイボール<br><span class="np">रामुने जम बिम हाइबल</span><span class="eng">Ramune Jim Beam Highball</span></td>
+                <td><strong>ラムネHB</strong></td>
+            </tr>
+            <tr>
+                <td>ゆずジムビームハイボール<br><span class="np">युजु जम बिम हाइबल</span><span class="eng">Yuzu Jim Beam Highball</span></td>
+                <td><strong>ゆずHB</strong></td>
+            </tr>
+            <tr>
+                <td>リアルゴールドジムビームハイボール<br><span class="np">रियल गोल्ड जम बिम हाइबल</span><span class="eng">Real Gold Jim Beam Highball</span></td>
+                <td><strong>リアルHB</strong></td>
+            </tr>
+            <tr>
+                <td>巨峰ジムビームハイボール<br><span class="np">क्योहो जम बिम हाइबल</span><span class="eng">Kyoho Grape Jim Beam Highball</span></td>
+                <td><strong>きょほうHB</strong></td>
+            </tr>
         </table>
 
-        <h2>ビール・ハイボール (बियर / हाइबल)</h2>
+        <h2>翠ジンソーダ</h2>
         <table>
-            <tr><th>メニュー</th><th>略語</th></tr>
-            <tr><td>生ビール <span class="np">ड्राफ्ट बयर</span></td><td>生</td></tr>
-            <tr><td>角ハイボール <span class="np">काकु हाइबल</span></td><td>角HB</td></tr>
-            <tr><td>ジムビームハイボール <span class="np">जम बम हाइबल</span></td><td>HB</td></tr>
-            <tr><td>翠ジンソーダ <span class="np">जन सोडा</span></td><td>すいS</td></tr>
+            <tr><th>メニュー名</th><th>略語伝票記入</th></tr>
+            <tr>
+                <td>翠ジンソーダ<br><span class="np">जिन सोडा</span><span class="eng">Gin Soda</span></td>
+                <td><strong>すいS</strong></td>
+            </tr>
+            <tr>
+                <td>翠ジンゆずソーダ<br><span class="np">युजु जिन सोडा</span><span class="eng">Yuzu Sui Gin Soda</span></td>
+                <td><strong>すいゆずS</strong></td>
+            </tr>
+            <tr>
+                <td>翠ジン緑茶割<br><span class="np">जिन हरियो चिया</span><span class="eng">Sui Gin Green Tea</span></td>
+                <td><strong>すい緑</strong></td>
+            </tr>
+            <tr>
+                <td>下町翠ジンソーダ<br><span class="np">सतामाचिी जिन सोडा</span><span class="eng">Shitamachi Gin Soda</span></td>
+                <td><strong>下町</strong></td>
+            </tr>
         </table>
-
-        <h2>サワー・日本酒・焼酎 (सावर / जापानी रक्सी)</h2>
+            <h2>サワー・お茶割り</h2>
         <table>
-            <tr><th>メニュー</th><th>略語</th></tr>
-            <tr><td>レモンサワー <span class="np">लेमन सावर</span></td><td>レモンS</td></tr>
-            <tr><td>芋焼酎 <span class="np">आलु रक्सी</span></td><td>芋</td></tr>
-            <tr><td>日本酒各種 <span class="np">जापानी रक्सी</span></td><td>男山 / 北勝など</td></tr>
+            <tr><th>メニュー名</th><th>略語伝票記入</th></tr>
+            <tr>
+                <td>レモンサワー<br><span class="np">लेमन सावर</span><span class="eng">Lemon Sour</span></td>
+                <td><strong>レモンS</strong></td>
+            </tr>
+            <tr>
+                <td>タコハイ<br><span class="np">टाको हाइ</span><span class="eng">Plain Sour</span></td>
+                <td><strong>タコH</strong></td>
+            </tr>
+            <tr>
+                <td>ウーロンハイ<br><span class="np">उलुङ चिया रक्सी</span><span class="eng">Oolong High</span></td>
+                <td><strong>ウーハイS</strong></td>
+            </tr>
+            <tr>
+                <td>緑茶ハイ<br><span class="np">हरयो चिया रक्सी</span><span class="eng">Green Tea High</span></td>
+                <td><strong>緑ハイS</strong></td>
+            </tr>
+            <tr>
+                <td>梅サワー<br><span class="np">प्लप सावर</span><span class="eng">Plum Sour</span></td>
+                <td><strong>うめサワーS</strong></td>
+            </tr>
         </table>
-
-        <h2>カクテル (ककटेल)</h2>
+        <h2>焼酎・梅酒</h2>
         <table>
-            <tr><th>メニュー</th><th>略語</th></tr>
-            <tr><td>カシス系 <span class="np">कासस</span></td><td>カシス〇</td></tr>
-            <tr><td>ピーチ系 <span class="np">पचि</span></td><td>ピーチ〇〇</td></tr>
-            <tr><td>巨峰系 <span class="np">क्योहो</span></td><td>きょほう〇〇</td></tr>
+            <tr><th>メニュー名</th><th>略語伝票記入</th><th>備考・飲み方例</th></tr>
+            <tr>
+                <td>鍛高譚<br><span class="np">तान्ताकातान</span><span class="eng">Tantakatan</span></td>
+                <td><strong>たんたか</strong></td>
+                <td>例：たんたかR、たんたか水</td>
+            </tr>
+            <tr>
+                <td>鍛高譚の梅酒<br><span class="np">तान्ताकातान प्लम रक्सी</span><span class="eng">Tantakatan Plum Wine</span></td>
+                <td><strong>たんうめ</strong></td>
+                <td>例：たんうめ水、たんうめS</td>
+            </tr>
+            <tr>
+                <td>鶯宿梅<br><span class="np">ओउशुकुबाई</span><span class="eng">Oushukubai</span></td>
+                <td><strong>おうしゅく</strong></td>
+                <td>例：おうしゅくR、おうしゅくS</td>
+            </tr>
+            <tr>
+                <td>南高梅酒<br><span class="np">प्लप रक्सी</span><span class="eng">Plum Wine</span></td>
+                <td><strong>なんこううめ</strong></td>
+                <td>例：なんこうR、なんこう水</td>
+            </tr>
+            <tr>
+                <td>しょっぱい梅サワー<br><span class="np">प्लप सावर (Salty)</span><span class="eng">Salty Plum Sour</span></td>
+                <td><strong>しょっぱいS</strong></td>
+                <td>うめ</td>
+            </tr>
         </table>
-
-        <h2>ソフトドリンク (सफ्ट ड्रिंक)</h2>
+           <h2>カクテル</h2>
         <table>
-            <tr><th>メニュー</th><th>略語</th></tr>
-            <tr><td>コーラ <span class="np">कोकाकोला</span></td><td>コーラ</td></tr>
-            <tr><td>ジンジャーエール <span class="np">अदुवा सोडा</span></td><td>GA</td></tr>
+            <tr><th>メニュー名</th><th>略語伝票記入</th><th>備考</th></tr>
+            <tr>
+                <td>カシスウーロン<br><span class="np">उलुङ कासिस</span><span class="eng">Oolong Cassis</span></td>
+                <td><strong>カシウー</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>カシス緑茶<br><span class="np">हरयो चिया कासिस</span><span class="eng">Green Tea Cassis</span></td>
+                <td><strong>カシス緑</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>カシスコーラ<br><span class="np">कोकाकोला कासिस</span><span class="eng">Cola Cassis</span></td>
+                <td><strong>カシスコーラ</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>カシスジンジャーエール<br><span class="np">अदुवा सोडा कासिस</span><span class="eng">Ginger Ale Cassis</span></td>
+                <td><strong>カシスGA</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>カシスオレンジジュース<br><span class="np">कासिस सुन्तला जुस</span><span class="eng">Cassis Orange Juice</span></td>
+                <td><strong>カシスOJ</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>ピーチウーロン/クーニャン<br><span class="np">उलुङ पचि</span><span class="eng">Peach Oolong</span></td>
+                <td><strong>ピーチウーロン/クーニャン</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>ピーチ緑茶<br><span class="np">हरयो चिया पचि</span><span class="eng">Green Tea Peach</span></td>
+                <td><strong>ピーチ緑</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>ピーチコーラ<br><span class="np">कोकाकोला पचि</span><span class="eng">Cola Peach</span></td>
+                <td><strong>ピーチコーラ</strong></td>
+            </tr>
+            <tr>
+                <td>ピーチジンジャーエール<br><span class="np">अदुवा सोडा पचि</span><span class="eng">Ginger Ale Peach</span></td>
+                <td><strong>ピーチGA</strong></td>
+            </tr>
+            <tr>
+                <td>ピーチオレンジジュース<br><span class="np">पचि सुन्तला जुस</span><span class="eng">Peach Orange Juice</span></td>
+                <td><strong>ピーチOJ</strong></td>
+            </tr>
+            <tr>
+                <td>巨峰ウーロン<br><span class="np">क्योहो उलुङ</span><span class="eng">Kyoho Grape Oolong</span></td>
+                <td><strong>きょほうウーロン</strong></td>
+                <td>タコHワンプッシュ</td>
+            </tr>
+            <tr>
+                <td>巨峰緑茶<br><span class="np">क्योहो हरयो चिया</span><span class="eng">Kyoho Grape Green Tea</span></td>
+                <td><strong>きょほう緑</strong></td>
+                <td>タコHワンプッシュ</td>
+            </tr>
+            <tr>
+                <td>巨峰コーラ<br><span class="np">कोकाकोला क्योहो</span><span class="eng">Cola Kyoho Grape</span></td>
+                <td><strong>きょほうコーラ</strong></td>
+                <td>タコHワンプッシュ</td>
+            </tr>
+            <tr>
+                <td>巨峰ジンジャーエール<br><span class="np">अदुवा सोडा क्योहो</span><span class="eng">Ginger Ale Kyoho Grape</span></td>
+                <td><strong>きょほうコーラ</strong></td>
+                <td>タコHワンプッシュ</td>
+            </tr>
+            <tr>
+                <td>巨峰オレンジジュース<br><span class="np">क्योहो सुन्तला जुस</span><span class="eng">Kyoho Grape Orange Juice</span></td>
+                <td><strong>きょほうOJ</strong></td>
+                <td>タコHワンプッシュ</td>
+            </tr>
+            <tr>
+                <td>オペレーター<br><span class="np">अपरेटर</span><span class="eng">Operator</span></td>
+                <td><strong>オペ</strong></td>
+                <td>白ワイン＋ジンジャーエール</td>
+            </tr>
+            <tr>
+                <td>キティ<br><span class="np">कटी</span><span class="eng">Kitty</span></td>
+                <td><strong>キティ</strong></td>
+                <td>赤ワイン＋ジンジャーエール</td>
+            </tr>
+        </table> 
+            <h2>焼酎・日本酒</h2>
+        <table>
+            <tr><th>メニュー名</th><th>略語伝票記入</th><th>備考・確認事項</th></tr>
+            <tr>
+                <td>芋焼酎<br><span class="np">आलु रक्सी</span><span class="eng">Sweet Potato Shochu</span></td>
+                <td><strong>芋</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>麦焼酎<br><span class="np">जौ रक्सी</span><span class="eng">Barley Shochu</span></td>
+                <td><strong>麦</strong></td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>男山<br><span class="np">ओतोकोयामा</span><span class="eng">Otokoyama Sake</span></td>
+                <td><strong>男山</strong></td>
+                <td>冷or燗を併記<br>注文時：一合か二合か聞く</td>
+            </tr>
+            <tr>
+                <td>福司<br><span class="np">फुकुचिुकासा</span><span class="eng">Fukutsukasa Sake</span></td>
+                <td><strong>福司</strong></td>
+                <td>冷or燗を併記<br>注文時：一合か二合か聞く</td>
+            </tr>
+            <tr>
+                <td>北の勝<br><span class="np">कितानोकाचु</span><span class="eng">Kitanokatsu Sake</span></td>
+                <td><strong>北勝</strong></td>
+                <td>冷or燗を併記<br>注文時：一合か二合か聞く</td>
+            </tr>
+            <tr>
+                <td>国稀 鬼殺し<br><span class="np">कु नमारे ओनगोरोसी</span><span class="eng">Kunimare Sake</span></td>
+                <td><strong>国稀 / 鬼</strong></td>
+                <td>冷or燗を併記<br>注文時：一合か二合か聞く</td>
+            </tr>
         </table>
-
-        <a href="index.html" class="back-link">← ホームに戻る</a>
-    </div>
+            <h2>ソフトドリンク</h2>
+        <table>
+            <tr><th>メニュー名</th><th>略語伝票記入</th><th>備考・確認事項</th></tr>
+            <tr>
+                <td>コーラ<br><span class="np">कोकाकोला</span><span class="eng">Cola</span></td>
+                <td><strong>コーラ</strong></td>
+                <td>ご注文時は必ず作るスタッフにわかるようにする！</td>
+            </tr>
+            <tr>
+                <td>ジンジャーエール<br><span class="np">अदुवा सोडा</span><span class="eng">Ginger Ale</span></td>
+                <td><strong>GA</strong></td>
+                <td>同上</td>
+            </tr>
+            <tr>
+                <td>リアルゴールド<br><span class="np">रियल गोल्ड</span><span class="eng">Real Gold</span></td>
+                <td><strong>リアゴ</strong></td>
+                <td>同上</td>
+            </tr>
+            <tr>
+                <td>オレンジジュース<br><span class="np">सुन्तला जुस</span><span class="eng">Orange Juice</span></td>
+                <td><strong>OJ</strong></td>
+                <td>同上</td>
+            </tr>
+        </table>
+        </div>
 </body>
 </html>
