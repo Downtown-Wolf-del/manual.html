@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>身だしなみの基準 | 下町ウルフ</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 50px 20px; 
+            font-family: 'Helvetica Neue', sans-serif; 
+            text-align: center; 
+            /* 背景は共通のもの（文字が読みやすいよう暗めに設定） */
+            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../2025_10_24_ウルフB-31.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed;
+            color: #fff; 
+            min-height: 100vh;
+        }
+        
+        h1 { 
+            font-size: 2.2rem; 
+            color: #c5a059; /* ウルフゴールド */
+            margin-bottom: 10px; 
+            display: inline-block;
+        }
+
+        .lead-text {
+            max-width: 750px;
+            margin: 0 auto 40px auto;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+
+        /* コンテンツを囲むメインの箱 */
+        .content-box {
+            max-width: 750px;
+            margin: 0 auto 40px auto;
+            background: rgba(40, 40, 40, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: left; /* 文章は左詰めで読みやすく */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* 各ルールのセクション */
+        .rule-section {
+            margin-bottom: 40px;
+        }
+        .rule-section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* 大見出し（1〜5） */
+        h2 {
+            font-size: 1.4rem;
+            color: #fff;
+            background: linear-gradient(45deg, #1e3c72, #2a5298); /* ディープブルー */
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-left: 6px solid #c5a059;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* 項目内の箇条書き */
+        .rule-item {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        .rule-label {
+            font-weight: bold;
+            color: #c5a059; /* ゴールド */
+            display: inline-block;
+            min-width: 120px;
+        }
+
+        /* NG例や注意書き用の薄赤ボックス */
+        .alert-box {
+            background: rgba(217, 83, 79, 0.12);
+            border-left: 4px solid #d9534f;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .alert-title {
+            color: #ff6b6b;
+            font-weight: bold;
+            margin-bottom: 30px;
+            display: inline;
+        }
+
+        /* OK例や推奨の薄緑・薄青ボックス */
+        .info-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #2a5298;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* 規定違反時の注意ボックス */
+        .warning-box {
+            background: rgba(255, 165, 0, 0.1);
+            border-left: 4px solid #ffa500;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* 強調文字 */
+        .highlight {
+            color: #ffdd67;
+            font-weight: bold;
+        }
+        .danger-text {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        /* 戻るボタン */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 1px solid #fff;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* スマホ対応 */
+        @media (max-width: 600px) {
+            body { padding: 30px 15px; }
+            h1 { font-size: 1.6rem; }
+            .lead-text { font-size: 0.95rem; }
+            .content-box { padding: 25px 20px; }
+            h2 { font-size: 1.15rem; padding: 10px; }
+            .rule-label { display: block; margin-bottom: 2px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>食のプロとして、ウルフのスタイルを</h1>
+    <p class="lead-text">
+        ウルフでは、お客様に安心と美味しさを届けるため、「清潔感」を何よりも大切にしています。<br>
+        私たちがプロとして自信を持ってカウンターに立つための身だしなみ基準です。
+    </p>
+
+    <div class="content-box">
+        
+        <div class="rule-section">
+            <h2>1. 髪型・髪色</h2>
+            <div class="rule-item">
+                <span class="rule-label">髪色：</span>
+                派手すぎず、落ち着いた清潔感のある色味を意識してください。<br>
+                <span class="danger-text">※明るすぎるカラーや奇抜な色は禁止です。</span>
+            </div>
+            <div class="rule-item">
+                <span class="rule-label">髪型：</span>
+                業務中、髪が料理やお客様に触れないよう、長い場合は<span class="highlight">必ず後ろで結ぶ</span>などしてまとめてください。
+            </div>
+            <div class="rule-item">
+                <span class="rule-label">清潔感：</span>
+                寝癖やボサボサの髪はNGです。出勤前に必ず鏡でチェックしましょう。
+            </div>
+        </div>
+
+        <div class="rule-section">
+            <h2>2. パンツ（ボトムス）の基準</h2>
+            <div class="rule-item">
+                <span class="rule-label">清潔感の重視：</span>
+                <span class="highlight">無地のパンツ</span>を着用してください。
+            </div>
+            <div class="rule-item">
+                <span class="rule-label">基本色：</span>
+                <span class="highlight">紺、黒、グレー系</span>を基本とします。
+            </div>
+            
+            <div class="alert-box">
+                <span class="danger-text">❌ NG例：</span> ロゴや文字が入っているもの、短パン、スウェット素材のパンツは禁止です。
+            </div>
+
+            <div class="info-box">
+                <span class="highlight">⭕ 丈の調整：</span> 長ズボンは暑い場合、<span class="highlight">8分丈程度に折り返して</span>着用することはOKです。
+            </div>
+        </div>
+
+        <div class="rule-section">
+            <h2>3. アクセサリー規定</h2>
+            <div class="rule-item">
+                <span class="rule-label">指輪：</span>
+                食品衛生上の観点から<span class="danger-text">原則禁止</span>ですが、<span class="highlight">結婚指輪に限り許可</span>します。
+            </div>
+            <div class="rule-item">
+                <span class="rule-label">ピアス：</span>
+                個人の判断に任せますが、<span class="danger-text">鼻ピアスは禁止</span>です。また、ギラギラしたものや極端に派手なものは控え、シンプルかつ1〜2個程度までとしてください。（状況に応じて外すよう指示することがあります）
+            </div>
+            <div class="rule-item">
+                <span class="rule-label">その他：</span>
+                ネックレス・ブレスレットは、衛生上の観点から<span class="danger-text">着用禁止</span>です。
+            </div>
+        </div>
+
+        <div class="rule-section">
+            <h2>4. その他の注意事項</h2>
+            <p style="margin: 0; line-height: 1.7; color: #e0e0e0;">
+                制服やアクセサリーの選択に際しては、常に清潔感を保ち、店舗のイメージを損なわないよう心がけてください。
+            </p>
+        </div>
+
+        <div class="rule-section">
+            <h2>5. 規定違反時の対応</h2>
+            <p style="margin: 0; line-height: 1.7; color: #e0e0e0;">
+                規定に反している場合は指導を行います。
+            </p>
+            <div class="warning-box">
+                <span style="color: #ffa500; font-weight: bold;">⚠️ 注意：</span><br>
+                その場で改善が見られない場合や、店舗のイメージを著しく損なう場合は、改善のため（身だしなみを整えるため）の対応をお願いすることがあります。
+            </div>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="back-btn">← ウルフのルール一覧に戻る</a>
+
+</body>
+</html>
