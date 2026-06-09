@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ウルフのルール | 下町ウルフ 研修ポータル</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 50px 20px; 
+            font-family: 'Helvetica Neue', sans-serif; 
+            text-align: center; 
+            /* ポータルサイトと統一感のある背景（少し暗めにして文字を読みやすく） */
+            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../2025_10_24_ウルフB-31.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed;
+            color: #fff; 
+            min-height: 100vh;
+        }
+        
+        h1 { 
+            font-size: 2.5rem; 
+            color: #fff; 
+            margin-bottom: 10px; 
+        }
+        .subtitle {
+            color: #c5a059;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        /* タグ（項目）を並べるグリッド構造 */
+        .tag-container { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); /* 2列で並べる */
+            gap: 20px; 
+            max-width: 800px; 
+            margin: 0 auto 50px auto; 
+        }
+
+        /* 6つのタグの共通デザイン */
+        .tag-card { 
+            background: linear-gradient(45deg, #1e3c72, #2a5298); /* ポータルと同じディープブルー */
+            padding: 25px; 
+            border-radius: 12px; 
+            text-decoration: none; 
+            color: #fff; 
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: 0.3s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        /* タグにホバーしたときのアニメーション */
+        .tag-card:hover { 
+            background: #c5a059; /* ウルフのゴールドに変化 */
+            color: #000; 
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 20px rgba(197, 160, 89, 0.4);
+        }
+
+        /* 戻るボタン */
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 1px solid #fff;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* スマホで見るときは1列にする */
+        @media (max-width: 600px) {
+            .tag-container {
+                grid-template-columns: 1fr;
+            }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ウルフのルール</h1>
+    <div class="subtitle">労務・働き方のきまり</div>
+
+    <div class="tag-container">
+        <a href="shift.html" class="tag-card">シフト提出</a>
+        <a href="timecard.html" class="tag-card">タイムカード</a>
+        <a href="sickness.html" class="tag-card">体調不良の連絡</a>
+        <a href="makanai.html" class="tag-card">まかない</a>
+        <a href="grooming.html" class="tag-card">身だしなみの基準</a>
+        <a href="belongings.html" class="tag-card">出勤する際の必要なもの</a>
+    </div>
+
+    <a href="../index.html" class="back-btn">← 研修ポータルに戻る</a>
+
+</body>
+</html>
