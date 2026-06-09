@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>出勤時の持ち物と制服について | 下町ウルフ</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 50px 20px; 
+            font-family: 'Helvetica Neue', sans-serif; 
+            text-align: center; 
+            /* 背景は共通のもの（文字が読みやすいよう暗めに設定） */
+            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../2025_10_24_ウルフB-31.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed;
+            color: #fff; 
+            min-height: 100vh;
+        }
+        
+        h1 { 
+            font-size: 2.2rem; 
+            color: #c5a059; /* ウルフゴールド */
+            margin-bottom: 10px; 
+            display: inline-block;
+        }
+
+        .lead-text {
+            max-width: 750px;
+            margin: 0 auto 40px auto;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+
+        /* コンテンツを囲むメインの箱 */
+        .content-box {
+            max-width: 750px;
+            margin: 0 auto 40px auto;
+            background: rgba(40, 40, 40, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: left; /* 文章は左詰めで読みやすく */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* 各ルールのセクション */
+        .rule-section {
+            margin-bottom: 40px;
+        }
+        .rule-section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* 大見出し（1, 2, 3） */
+        h2 {
+            font-size: 1.4rem;
+            color: #fff;
+            background: linear-gradient(45deg, #1e3c72, #2a5298); /* ディープブルー */
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-left: 6px solid #c5a059;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* 貸与品用のボックス */
+        .rental-box {
+            background: rgba(42, 82, 152, 0.15);
+            border: 1px solid rgba(42, 82, 152, 0.4);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .rental-title {
+            font-weight: bold;
+            color: #5bc0de;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        /* チェックリスト形式のスタイル */
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .checklist li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        /* 四角いチェックボックスの再現 */
+        .checklist li::before {
+            content: "□";
+            position: absolute;
+            left: 5px;
+            top: 0;
+            color: #c5a059;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* 箇条書きの中の補足・注意テキスト */
+        .sub-info {
+            display: block;
+            font-size: 0.9rem;
+            color: #b0b0b0;
+            margin-top: 4px;
+        }
+
+        /* 注意書きや補足のボックス */
+        .alert-box {
+            background: rgba(217, 83, 79, 0.12);
+            border-left: 4px solid #d9534f;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* 出勤前チェックメッセージ */
+        .message-box {
+            background: linear-gradient(135deg, rgba(197,160,89,0.15), rgba(0,0,0,0));
+            border: 1px solid #c5a059;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .message-title {
+            color: #c5a059;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* 強清文字 */
+        .highlight {
+            color: #ffdd67;
+            font-weight: bold;
+        }
+        .danger-text {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        /* 戻るボタン */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 1px solid #fff;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* スマホ対応 */
+        @media (max-width: 600px) {
+            body { padding: 30px 15px; }
+            h1 { font-size: 1.6rem; }
+            .lead-text { font-size: 0.95rem; }
+            .content-box { padding: 25px 20px; }
+            h2 { font-size: 1.15rem; padding: 10px; }
+            .rental-box { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>出勤時の持ち物と制服について</h1>
+    <p class="lead-text">
+        ウルフへ出勤する際は、以下の準備をお願いします。<br>
+        自分自身の準備を整えることも、プロとしての第一歩です！
+    </p>
+
+    <div class="content-box">
+        
+        <div class="rule-section">
+            <h2>1. 店舗から貸し出すもの</h2>
+            <div class="rental-box">
+                <div class="rental-title">👕 上着（制服）とサロン</div>
+                <p style="margin: 0; line-height: 1.6; font-size: 0.95rem; color: #e0e0e0;">
+                    業務で使用する上着とサロンは、店舗から貸し出します。
+                </p>
+            </div>
+            <div style="font-size: 0.95rem; line-height: 1.7; color: #d0d0d0; padding-left: 5px;">
+                <strong>⚠️ 管理についてのお願い</strong><br>
+                貸与品は大切に扱ってください。紛失や破損があった場合は必ず報告してください。<br>
+                <span class="highlight">退職時には必ずクリーニングをして返却</span>をお願いします。
+            </div>
+        </div>
+
+        <div class="rule-section">
+            <h2>2. 自分で用意するもの</h2>
+            <ul class="checklist">
+                <li>
+                    <span class="highlight">動きやすいズボン</span>
+                    <span class="sub-info">無地のパンツ（黒・紺・グレー系など）を着用してください。</span>
+                    <span class="sub-info">⭕ デニム素材もOKです。</span>
+                    <div class="alert-box" style="margin-top: 8px; margin-bottom: 0;">
+                        <span class="danger-text">❌ NG：</span> ロゴや文字入りのもの、スウェット、短パンは禁止です。
+                    </div>
+                </li>
+                <li>
+                    <span class="highlight">動きやすい靴</span>
+                    <span class="sub-info">安全のため、滑りやすくない動きやすい靴をご用意ください。<span class="highlight">（クロックス可）</span></span>
+                </li>
+                <li>
+                    <span class="highlight">靴下</span>
+                    <span class="sub-info">派手すぎないものを選んでください。</span>
+                </li>
+                <li>
+                    <span class="highlight">筆記用具（メモ帳・ボールペン）</span>
+                    <span class="sub-info"><span class="danger-text">業務の必需品です。</span>忘れないよう必ず持参してください。</span>
+                </li>
+                <li>
+                    <span class="highlight">インナー</span>
+                    <span class="sub-info">制服の下に着るインナー（必要に応じてご用意ください）。</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="message-box">
+            <div class="message-title">📋 3. 忘れ物をしないために</div>
+            <p style="margin: 0; color: #fff; font-size: 1rem;">
+                出勤前には、必ず上記の持ち物が揃っているかチェックをお願いします。
+            </p>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="back-btn">← ウルフのルール一覧に戻る</a>
+
+</body>
+</html>
