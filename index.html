@@ -24,6 +24,18 @@
         .card { background: rgba(51, 51, 51, 0.8); padding: 30px; border-radius: 15px; text-decoration: none; color: #fff; transition: 0.3s; }
         .card:hover { background: #c5a059; color: #000; transform: translateY(-10px); }
         h2 { margin: 0; font-size: 1.5rem; }
+
+        /* 【新設】ウルフのルール専用のカード（信頼感・安心感のあるディープブルー） */
+        .card-rule {
+            grid-column: span 3;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            border: 2px solid #fff;
+            box-shadow: 0 0 15px rgba(30, 60, 114, 0.4);
+        }
+        .card-rule:hover {
+            background: #fff;
+            color: #1e3c72;
+        }
     </style>
 </head>
 <body>
@@ -33,14 +45,19 @@
     </div>
 
     <div class="menu-grid">
-    <a href="philosophy.html" class="card" style="grid-column: span 3; background: #c5a059; color: #000;">
-        <h2>札幌で一番愛される居酒屋を目指して</h2>
-        <p>私たちの理念と目指すべき未来</p>
-    </a>
+        <a href="philosophy.html" class="card" style="grid-column: span 3; background: #c5a059; color: #000;">
+            <h2>札幌で一番愛される居酒屋を目指して</h2>
+            <p>私たちの理念と目指すべき未来</p>
+        </a>
 
-    <a href="hall/index.html" class="card"><h2>ホール</h2></a>
-    <a href="kitchen/index.html" class="card"><h2>キッチン</h2></a>
-    <a href="counter/index.html" class="card"><h2>カウンター</h2></a>
+        <a href="rules/index.html" class="card card-rule">
+            <h2>　ウルフのルール（労務・働き方のきまり）</h2>
+            <p style="margin: 5px 0 0 0; font-size: 0.95rem; opacity: 0.9;">シフト・体調不良の連絡・まかない・身だしなみの基準</p>
+        </a>
+
+        <a href="hall/index.html" class="card"><h2>ホール</h2></a>
+        <a href="kitchen/index.html" class="card"><h2>キッチン</h2></a>
+        <a href="counter/index.html" class="card"><h2>カウンター</h2></a>
     </div>
 </body>
 </html>
