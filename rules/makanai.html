@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>まかないのルール | 下町ウルフ</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 50px 20px; 
+            font-family: 'Helvetica Neue', sans-serif; 
+            text-align: center; 
+            /* 背景は共通のもの（文字が読みやすいよう暗めに設定） */
+            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../2025_10_24_ウルフB-31.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed;
+            color: #fff; 
+            min-height: 100vh;
+        }
+        
+        h1 { 
+            font-size: 2.2rem; 
+            color: #c5a059; /* ウルフゴールド */
+            margin-bottom: 10px; 
+            display: inline-block;
+        }
+
+        .lead-text {
+            max-width: 750px;
+            margin: 0 auto 40px auto;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+
+        /* コンテンツを囲むメインの箱 */
+        .content-box {
+            max-width: 750px;
+            margin: 0 auto 40px auto;
+            background: rgba(40, 40, 40, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: left; /* 文章は左詰めで読みやすく */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* 各ルールのセクション */
+        .rule-section {
+            margin-bottom: 40px;
+        }
+        .rule-section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* 大見出し（1, 2, 3） */
+        h2 {
+            font-size: 1.4rem;
+            color: #fff;
+            background: linear-gradient(45deg, #1e3c72, #2a5298); /* ディープブルー */
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-left: 6px solid #c5a059;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* 箇条書き用スタイル */
+        .rule-item {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        .rule-label {
+            font-weight: bold;
+            color: #c5a059; /* ゴールド */
+            display: inline-block;
+            min-width: 110px;
+        }
+
+        /* 条件・料金の2列カードレイアウト */
+        .makanai-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .makanai-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .card-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #c5a059;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            padding-bottom: 5px;
+        }
+
+        /* 衛生管理・注意書き用のボックス */
+        .alert-box {
+            background: rgba(217, 83, 79, 0.15);
+            border-left: 4px solid #d9534f;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .alert-title {
+            color: #ff6b6b;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* 小林さんまかない情報のボックス */
+        .info-box {
+            background: rgba(42, 82, 152, 0.15);
+            border-left: 4px solid #2a5298;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* メッセージボックス */
+        .message-box {
+            background: linear-gradient(135deg, rgba(197,160,89,0.15), rgba(0,0,0,0));
+            border: 1px solid #c5a059;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .message-title {
+            color: #c5a059;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* 強調文字 */
+        .highlight {
+            color: #ffdd67;
+            font-weight: bold;
+        }
+        .danger-text {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        /* 戻るボタン */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 1px solid #fff;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* スマホ対応 */
+        @media (max-width: 600px) {
+            body { padding: 30px 15px; }
+            h1 { font-size: 1.6rem; }
+            .lead-text { font-size: 0.95rem; }
+            .content-box { padding: 25px 20px; }
+            h2 { font-size: 1.15rem; padding: 10px; }
+            .makanai-grid { grid-template-columns: 1fr; gap: 15px; }
+            .message-box { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ウルフの特権！まかない制度</h1>
+    <p class="lead-text">
+        ウルフで働くスタッフのお楽しみ、まかない制度です！<br>
+        美味しい食事で元気をチャージして、仕事もプライベートも充実させてください。みんなに気持ちよく利用してもらうため、以下のルールを設けています。
+    </p>
+
+    <div class="content-box">
+        
+        <div class="makanai-grid">
+            <div class="makanai-card">
+                <div class="card-title">📋 1. 利用できる条件</div>
+                <div class="rule-item" style="margin: 0; font-size: 0.95rem;">
+                    <span class="highlight">【勤務日限定】</span><br>原則としてウルフでの勤務日のみ利用可能です。<br><br>
+                    <span class="highlight">【勤務時間】</span><br>1回の勤務で<span class="highlight">「5時間以上」</span>働いたスタッフが対象です。
+                </div>
+            </div>
+            <div class="makanai-card">
+                <div class="card-title">💰 2. 利用料金について</div>
+                <div class="rule-item" style="margin: 0; font-size: 0.95rem;">
+                    <span class="highlight">【負担なし】</span><br>スタッフの皆さんへの食事サポートとして、原則負担はいただいていません。<br><br>
+                    <span class="highlight">【利用ルール】</span><br>1人あたり<span class="highlight">「200円相当」</span>の食材・メニューを上限として利用可能です。
+                </div>
+            </div>
+        </div>
+
+        <div class="rule-section">
+            <h2>3. 利用時のルール（衛生管理と節度）</h2>
+            
+            <div class="info-box">
+                <strong>🍳 現在、まかないは小林さんが作ってくれています！</strong><br>
+                アレルギーやどうしても食べられないものがある場合は、必ず<strong>グループLINEで事前に共有</strong>してください。<br>
+                <span class="danger-text">※勝手に調理場に入ったり、自分好みの料理を勝手に作ったりすることは控えてください。</span>
+            </div>
+
+            <div class="rule-item" style="padding-left: 5px;">
+                <span class="rule-label">✨ 衛生の徹底：</span><br>
+                まかないを食べる前・食べた後は、必ず<strong>手洗い・アルコール消毒</strong>を徹底してください。
+            </div>
+
+            <div class="alert-box">
+                <div class="alert-title">⚠ 絶対禁止事項</div>
+                許可なく店舗の食材を勝手に使用したり、持ち帰ったりすることは<span class="danger-text">「窃盗」</span>とみなす可能性があるため、絶対に禁止します。
+            </div>
+        </div>
+
+        <div class="message-box">
+            <div class="message-title">＜大切にしていること＞</div>
+            <p style="margin: 0; color: #fff; line-height: 1.6;">
+                まかないは、チームの仲を深め、美味しいものを共有する大切な時間です。<br>
+                <span class="highlight">ルールを守って、感謝の気持ちで美味しくいただきましょう！</span>
+            </p>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="back-btn">← ウルフのルール一覧に戻る</a>
+
+</body>
+</html>
