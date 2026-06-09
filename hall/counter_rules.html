@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カウンター・シーティングコントロールマニュアル | 下町ウルフ</title>
+    <style>
+        body { 
+            margin: 0; padding: 20px; font-family: sans-serif; color: #fff; line-height: 1.6; 
+            /* ホールフォルダ内から背景画像を参照 */
+            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('2025_11_18_ウルフ1379-6.jpg'); 
+            background-size: cover; background-position: center; background-attachment: fixed; 
+        }
+        .container { max-width: 850px; margin: 0 auto; background: rgba(30, 30, 30, 0.95); padding: 30px; border-radius: 15px; border-top: 5px solid #c5a059; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        
+        .main-title { text-align: center; color: #c5a059; margin-bottom: 5px; font-size: 1.8rem; font-weight: bold; }
+        .sub-title { text-align: center; color: #aaa; margin-bottom: 30px; font-size: 0.95rem; line-height: 1.4; }
+        
+        h2 { color: #c5a059; border-bottom: 2px solid #c5a059; margin-top: 40px; padding-bottom: 8px; font-size: 1.3rem; }
+        h3 { color: #ffeb3b; font-size: 1.15rem; margin-top: 0; margin-bottom: 10px; }
+        h4 { margin: 0 0 10px 0; font-size: 1.05rem; }
+        
+        /* 席コントロール別カード（CL・C1） */
+        .cl-card { background: rgba(212, 175, 55, 0.05); border-left: 4px solid #d4af37; padding: 20px; border-radius: 10px; margin-top: 20px; }
+        .c1-card { background: rgba(76, 175, 80, 0.05); border-left: 4px solid #4caf50; padding: 20px; border-radius: 10px; margin-top: 20px; }
+        
+        /* メリット部分の小枠 */
+        .benefit-box { background: rgba(0, 0, 0, 0.3); border: 1px dashed #555; padding: 15px; border-radius: 8px; margin-top: 15px; }
+        
+        /* トーク用カード（黒） */
+        .talk-card { background: rgba(0, 0, 0, 0.4); border-left: 4px solid #00bcd4; padding: 15px; border-radius: 8px; margin-top: 15px; }
+        .talk-row { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dashed #444; }
+        .talk-row:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        
+        /* 実践チェックリストカード */
+        .checklist-card { background: rgba(255, 255, 255, 0.02); border-left: 4px solid #e91e63; padding: 20px; border-radius: 10px; margin-top: 20px; }
+        .check-item { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .check-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        
+        .badge-type { background: #555; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem; display: inline-block; margin-right: 8px; vertical-align: middle; }
+        .badge-cl { background: #d4af37; color: #000; font-weight: bold; }
+        .badge-c1 { background: #4caf50; color: #fff; font-weight: bold; }
+        
+        .lang-romaji { display: block; color: #ccc; font-size: 0.85rem; font-style: italic; margin-top: 4px; line-height: 1.4; }
+        .lang-nepali { display: block; color: #aaa; font-size: 0.85rem; margin-top: 4px; line-height: 1.4; }
+        
+        .back-link { display: block; margin-top: 40px; text-align: center; color: #c5a059; text-decoration: none; font-weight: bold; background: #333; padding: 15px; border-radius: 8px; transition: 0.3s; }
+        .back-link:hover { background: #c5a059; color: #000; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">【下町ウルフ】シーティングコントロールマニュアル</h1>
+        <div class="sub-title">
+            【Shitamachi Wolf】 काउन्टर नियन्त्रण निर्देशिका (Seating Control Manual)
+        </div>
 
+        <h2>1. カウンター席の基本ルール / काउन्ター सिटको आधारभूत नियम</h2>
+        <p style="font-weight: bold; margin-bottom: 20px; font-size: 1.05rem;">
+            お客様のタイプに合わせて、ご案内するエリアを明確に分けます。<br>
+            <span class="lang-nepali" style="font-weight: normal; color: #ddd;">ग्राहकको प्रकार अनुसार, उनीहरूलाई बसाउने ठाउँ स्पष्ट रूपमा छुट्याउने गरिन्छ।</span>
+        </p>
+
+        <div class="cl-card">
+            <h3 style="color: #d4af37;"><span class="badge-type badge-cl">CL側 優先！</span> 👑 常連様・リピーター様 （入り口側）</h3>
+            <p style="color: #aaa; font-size: 0.85rem; margin-top: -5px; margin-bottom: 15px;">
+                Jouren-sama / Ripiitaa-sama = 【 CL-gawa 】 Yuusen! / प्रवेशद्वार तर्फ प्राथमिकता
+            </p>
+            <p style="margin: 0; font-weight: bold;">
+                いつもお店を支えてくださる常連様は、入り口に近い「CL側」へ優先的にご案内します。<br>
+                <span class="lang-romaji" style="font-weight: normal;">Itsumo omise o sasaete kudasaru jouren-sama wa, iriguchi ni chikai "CL-gawa" e yuusenteki ni goannai shimasu.</span>
+                <span class="lang-nepali" style="font-weight: normal;">सधैं पसललाई सहयोग गर्नुहुने नियमित ग्राहकहरूलाई प्रवेशद्वार नजिकैको "CL-तर्फ" प्राथमिकताका साथ बसाउने।</span>
+            </p>
+
+            <div class="benefit-box">
+                <h4 style="color: #d4af37; margin: 0 0 5px 0;">🎯 配置の目的：『最強のサクラ効果』</h4>
+                <p style="margin: 0; font-size: 0.95rem;">
+                    入り口近くの常連様が「いつも賑わっている楽しそうなお店」という活気を演出してくれます。<br>
+                    <span class="lang-romaji" style="font-size: 0.85rem; color: #ccc;">Iriguchi chikaku no jouren-sama ga "itsumo nigiwatteiru tanoshisou na omise" toiu kakki o enshutsu shite kuremasu.</span>
+                    <span class="lang-nepali" style="font-size: 0.85rem; color: #aaa;">प्रवेशद्वार नजिकै नियमित ग्राहक बस्दा, बाहिरबाट हेर्दा पसल सधैं रमाइलो र व्यस्त देखिन्छ। यसले नयाँ ग्राहकलाई आकर्षित गर्छ।</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="c1-card">
+            <h3 style="color: #4caf50;"><span class="badge-type badge-c1">C1側 優先！</span> 🔰 ご新規のお客様 （奥側）</h3>
+            <p style="color: #aaa; font-size: 0.85rem; margin-top: -5px; margin-bottom: 15px;">
+                Goshinki no okyakusama = 【 C1-gawa 】 Yuusen! / भित्र पछाडि प्राथमिकता
+            </p>
+            <p style="margin: 0; font-weight: bold;">
+                初めてウルフに足を運んでくださったお客様は、店舗の奥にある「C1側」へ優先的にご案内します。<br>
+                <span class="lang-romaji" style="font-weight: normal;">Hajimete Wolf ni ashi o hakonde kudasatta okyakusama wa, tenpo no oku ni aru "C1-gawa" e yuusenteki ni goannai shimasu.</span>
+                <span class="lang-nepali" style="font-weight: normal;">पहिलो पटक वुल्फमा आउनुभएका नयाँ ग्राहकहरूलाई पसलको भित्र पछाडि रहेको "C1-तर्फ" प्राथमिकताका साथ बसाउने।</span>
+            </p>
+
+            <div class="benefit-box">
+                <h4 style="color: #4caf50; margin: 0 0 5px 0;">🎯 配置の目的：『焼き場のLIVE感を楽しむ』</h4>
+                <p style="margin: 0; font-size: 0.95rem;">
+                    初めてのお客様が、人の出入りでバタバタする入り口を避け、奥で落ち着いて楽しめるように配慮します。<br>
+                    <span class="lang-romaji" style="font-size: 0.85rem; color: #ccc;">Hajimete no okyakusama ga, hito no deiri de batabata suru iriguchi o sake, oku de ochitsuite tanoshimeru youni hairyo shimasu.</span>
+                    <span class="lang-nepali" style="font-size: 0.85rem; color: #aaa;">नयाँ ग्राहकलाई मानिसहरूको आवतजावत हुने प्रवेशद्वारबाट टाढा, शान्त वातावरणमा पसलको मज्जा लिन र भान्साको रमाइろ माहोल देखाउन भित्र बसाउने।</span>
+                </p>
+            </div>
+        </div>
+
+
+        <h2>3. 現場でのリアルな声掛け例 / बोल्ने तरिकाहरू</h2>
+        <p style="color: #ffeb3b; font-weight: bold; font-size: 0.95rem; margin-top: -5px;">
+            💡 ※最高の笑顔とウェルカム感で！ / ※सधैं उत्कृष्ट मुस्कान र स्वागत गर्ने भावको साथ!
+        </p>
+
+        <div class="talk-card" style="border-left-color: #d4af37;">
+            <h4 style="color: #d4af37; margin-bottom: 15px;">👑 常連様を【CL側】へお通しする時 / नियमित ग्राहकलाई CL तर्फ पठाउँदा</h4>
+            
+            <div class="talk-row">
+                <div><span class="badge-type">パターン A</span> <strong style="color: #ffeb3b; font-size: 1.05rem;">「〇〇さん、いらっしゃい！今日もこっち（いつもの席）でいいですか？」</strong></div>
+                <span class="lang-romaji">"〇〇-san, irasshai! Kyou mo kotchi (itsumo no seki) de ii desu ka?"</span>
+                <span class="lang-nepali">(〇〇 जी, स्वागत छ! आज पनि यतै (सधैं बस्ने ठाउँमा) बस्ने हो?)</span>
+            </div>
+
+            <div class="talk-row" style="border: none; padding-bottom: 0;">
+                <div><span class="badge-type">パターン B</span> <strong style="color: #ffeb3b; font-size: 1.05rem;">「〇〇さん、ここ空いてるんで、今日もいろいろ喋りましょ！」</strong></div>
+                <span class="lang-romaji">"〇〇-san, koko aiterunde, kyou mo iroiro shaberimasho!"</span>
+                <span class="lang-nepali">(〇〇 जी, यहाँ खाली छ, आज पनि धेरै कुरा गरौं है!)</span>
+            </div>
+        </div>
+
+        <div class="talk-card" style="border-left-color: #4caf50;">
+            <h4 style="color: #4caf50; margin-bottom: 15px;">🔰 ご新規様を【C1側】へお通しする時 / नयाँ ग्राहकलाई C1 तर्फ पठाउँदा</h4>
+            
+            <div class="talk-row">
+                <div><span class="badge-type">パターン A</span> <strong style="color: #ffeb3b; font-size: 1.05rem;">「いらっしゃいませ！奥の席空いてるんで、そちらでゆっくりどうぞー！」</strong></div>
+                <span class="lang-romaji">"Irasshaimase! Oku no seki aiterunde, sochira de yukkuri douzoo!"</span>
+                <span class="lang-nepali">(स्वागत छ! भित्रको सिट खाली छ, कृपया त्यहाँ आरामले बस्नुहोस्!)</span>
+            </div>
+
+            <div class="talk-row" style="border: none; padding-bottom: 0;">
+                <div><span class="badge-type">パターン B</span> <strong style="color: #ffeb3b; font-size: 1.05rem;">「2名様ですね、カウンターの奥側へどうぞ！」</strong></div>
+                <span class="lang-romaji">"Ni-mei sama desu ne, counter no okugawa e douzo!"</span>
+                <span class="lang-nepali">(दुई जना हुनुहुन्छ? कृपया काउन्टरको भित्र पट्टि जानुहोस्!)</span>
+            </div>
+        </div>
+
+
+        <h2>📋 カウンターコントロールの実践チェックリスト</h2>
+        <p style="color: #aaa; font-size: 0.9rem; margin-top: -5px;">
+            काउन्टर नियन्त्रणको व्यावहारिक चेकलिस्ट (Practice Checklist)
+        </p>
+
+        <div class="checklist-card">
+            <div class="check-item">
+                <h4 style="color: #ffeb3b; margin: 0 0 5px 0;">1．入店時の瞬時の見極め / पसलमा आउँदा तुरुन्तै चिन्ने</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-weight: bold;">
+                    お客様の顔をしっかり見て、常連様かご新規様かを瞬時に判断できているか。<br>
+                    <span class="lang-romaji" style="font-weight: normal; color: #ccc;">Okyakusama no kao o shikkari mite, jouren-sama ka goshinki-sama ka o shunji ni handan dekite iru ka.</span>
+                    <span class="lang-nepali" style="font-weight: normal; color: #aaa;">ग्राहकको अनुहार राम्ररी हेरेर, नियमित ग्राहक हो कि नयाँ ग्राहक हो भनेर तुरुन्तै छुट्याउन सकेको छ कि छैन?</span>
+                </p>
+            </div>
+
+            <div class="check-item">
+                <h4 style="color: #ffeb3b; margin: 0 0 5px 0;">2．席の指定誘導 / सिटतोकेर पठाउने</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-weight: bold;">
+                    ただ「空いている席へどうぞ」ではなく、意図を持った席（CL側・C1側）へスムーズに誘導できているか。<br>
+                    <span class="lang-romaji" style="font-weight: normal; color: #ccc;">Tada "aiteiru seki e douzo" dewa naku, ito o motta seki (CL-gawa / C1-gawa) e sumuuzu ni yuudou dekite iru ka.</span>
+                    <span class="lang-nepali" style="font-weight: normal; color: #aaa;">मात्र "खाली सिटमा जानुहोस्" नभनी, उद्देश्य अनुसारको सिट (CL-तर्फ वा C1-तर्फ) सहजै पठाउन सकेको छ कि छैन?</span>
+                </p>
+            </div>
+
+            <div class="check-item">
+                <h4 style="color: #ffeb3b; margin: 0 0 5px 0;">3．活気ある声出し / ऊर्जावान आवाज निकाल्ने</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-weight: bold;">
+                    店舗全体に活気を伝えるため、お腹から声を出してお出迎え・連携ができているか。<br>
+                    <span class="lang-romaji" style="font-weight: normal; color: #ccc;">Tenpo zentai ni kakki o tsutaeru tame, onaka kara koe o dashite omukae, renkei ga dekite iru ka.</span>
+                    <span class="lang-nepali" style="font-weight: normal; color: #aaa;">पसलभरि ऊर्जा फैलाउनको लागि, ठूलो स्वरले ग्राहकलाई स्वागत गर्ने र सहकार्य गर्न सकेको छ कि छैन?</span>
+                </p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">← ホール業務ポータルに戻る</a>
+    </div>
+</body>
+</html>
