@@ -15,6 +15,10 @@
         h1 { color: #c5a059; text-align: center; }
         .menu-grid { display: grid; gap: 15px; margin-top: 30px; }
         .btn { padding: 20px; color: white; text-decoration: none; border-radius: 8px; text-align: center; font-weight: bold; display: block; }
+        
+        /* 【新設】最重要マニュアル：カウンターの使命専用（輝くプレミアムゴールド） */
+        .btn-mission { background: linear-gradient(45deg, #d4af37, #aa7c11); border: 2px solid #fff; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+        
         .btn-main { background: #c5a059; }
         .btn-sub { background: #333; }
         .btn-back { background: #555; margin-top: 30px; }
@@ -26,13 +30,13 @@
         <p style="text-align:center;">カウンター業務に関するマニュアルを選択してください。</p>
 
         <div class="menu-grid">
-            <a href="mission.html" class="btn btn-main">カウンタースタッフの使命</a>
+            <a href="mission.html" class="btn btn-mission" style="font-size: 1.2rem; letter-spacing: 2px;">★ カウンタースタッフの使命 ★</a>
             
-            <a href="counter_rules.html" class="btn btn-sub">カウンターのオープン準備</a>
+            <a href="counter_rules.html" class="btn btn-main">カウンターのオープン準備</a>
             
-            <a href="close.html" class="btn btn-main">カウンターのクローズ作業</a>
+            <a href="close.html" class="btn btn-sub">カウンターのクローズ作業</a>
             
-            <a href="stock.html" class="btn btn-sub">在庫表</a>
+            <a href="stock.html" class="btn btn-main">在庫表</a>
             
             <a href="../index.html" class="btn btn-back">研修ポータルへ戻る</a>
         </div>
