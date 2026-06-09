@@ -38,10 +38,16 @@
         .talk-row { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dashed #444; }
         .talk-row:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
         
+        /* コース選択別の内訳カード */
+        .course-box { background: rgba(255,255,255,0.02); border: 1px solid #555; padding: 15px; border-radius: 8px; margin-top: 15px; }
+        
+        /* 絶対厳守・警告アラート（赤） */
+        .tessoku-card { background: rgba(244, 67, 54, 0.08); border-left: 4px solid #f44336; padding: 20px; border-radius: 10px; margin-top: 25px; }
+        
         /* バッジ表示 */
         .badge-type { background: #555; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem; display: inline-block; margin-right: 8px; vertical-align: middle; }
         .badge-type.nag { background: #ff5722; }
-        .badge-type.ok { background: #4caf50; }
+        .badge-info { background: #444; color: #ffeb3b; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; margin-right: 5px; }
         
         .lang-romaji { display: block; color: #ccc; font-size: 0.85rem; font-style: italic; margin-top: 4px; line-height: 1.4; }
         .lang-nepali { display: block; color: #aaa; font-size: 0.85rem; margin-top: 4px; line-height: 1.4; }
@@ -71,7 +77,7 @@
             <h3>① カウンター席は「右側からのアプローチ」/ काउन्टर सिटका लागि: "दायाँ हात तर्फबाट सेवा"</h3>
             
             <div class="counter-card">
-                <h4 style="color: #00bcd4;">【1階 カウンター席】</h4>
+                <h4 style="color: #00bcd4; margin-bottom: 5px;">【1階 カウンター席】</h4>
                 <p style="margin: 0; font-weight: bold;">
                     カウンター席でのおしぼり、ドリンク、料理の提供やバッシングは、原則として<span style="color: #00bcd4;">「お客様の右側から」</span>行います。<br>
                     <span class="lang-nepali" style="font-weight: normal;">काउन्टर सिटमा ओशिबोरी, पेय पदार्थ वा खाना दिँदा र खाली प्लेट हटाउँदा ग्राहकको दायाँ तर्फबाट गर्नुहोस्।</span>
@@ -79,10 +85,10 @@
             </div>
 
             <div class="zashiki-card">
-                <h4 style="color: #b388ff;">【2階席（ボックス席）の注意点 / २ तल्लाको बक्स सिटका लागि ध्यान दिनुपर्ने कुरा】</h4>
+                <h4 style="color: #b388ff; margin-bottom: 5px;">【2階席（ボックス席）の注意点 / २ तल्लाको बक्स सिटका लागि ध्यान दिनुपर्ने कुら】</h4>
                 <p style="margin: 0; font-weight: bold;">
                     2階席は構造上、右側からアプローチできないため、通路側から「失礼いたします」とお声がけして提供・バッシングを行ってください。<br>
-                    <span class="lang-nepali" style="font-weight: normal;">२ तल्लाको बक्स सिटमा दायाँ तर्फबाट जान नमिल्ने भएकोले, गल्ली (Aisle) तर्फबाट "Shitsurei shimasu" (失礼いたします) भनी भित्र पसेर सेवा वा प्लेट हटाउने काम गर्नुहोस्。</span>
+                    <span class="lang-nepali" style="font-weight: normal;">२ तल्लाको बक्स सिटमा दायाँ तर्फबाट जान नमिल्ने भएकोले, गल्ली (Aisle) तर्फबाट "Shitsurei shimasu" (失礼いたします) भनी भित्र पसेर सेवा वा प्लेट हटाउने काम गर्नुहोस्।</span>
                 </p>
             </div>
         </div>
@@ -91,7 +97,7 @@
             <h3 style="color: #e91e63; margin-top: 0; border: none; padding: 0;">②「巣に戻るまでの表情」/ "भान्सामा नपुुन्जेल मुस्कुुराउनुहोस्"</h3>
             <p style="margin: 0; font-weight: bold; font-size: 1.05rem;">
                 厨房の暖簾をくぐるその瞬間まで「見られている」意識を持ち、笑顔を保ってください。<br>
-                <span class="lang-nepali" style="font-weight: normal; color: #ddd; margin-top: 10px;">भान्साको ढोकाभित्र नछिरेसम्म ग्राहकले तपाईंलाई हेरिरहनुभएको छ भन्ने सोचेर मुस्कुराहट कायम राख्नुहोस्।</span>
+                <span class="lang-nepali" style="font-weight: normal; color: #ddd; margin-top: 10px;">भान्साको ढोकाभित्र नछिरेसम्म ग्राहकले तपाईंलाई हेरिरहनुभएको छ भन्ने सोचेर मुस्कुराहट कायम राख्नुहोस्。</span>
             </p>
         </div>
 
@@ -120,10 +126,102 @@
                 </div>
 
                 <div class="talk-row" style="border: none; padding-bottom: 0;">
-                    <div><span class="badge-type nag">困った時 / समस्या परेमा</span> <strong style="color: #ffeb3b; font-size: 1.05rem;">「少々お待ちいただけますか？」</strong></div>
+                    <div><span class="badge-type">困った時 / समस्या परेमा</span> <strong style="color: #ffeb3b; font-size: 1.05rem;">「少々お待ちいただけますか？」</strong></div>
                     <span class="lang-romaji">"Shoushou omachi kudasai"</span>
                 </div>
             </div>
+        </div>
+
+        <h2>■ お席にご案内する / सिटमा लैजाने</h2>
+        <p style="color: #aaa; font-size: 0.9rem; margin-top: -5px;">
+            案内する席の種別をタップして、既存の席マニュアルを確認・連携してください。
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 20px;">
+            <a href="counter_rules.html" style="text-decoration: none; display: block;">
+                <div class="counter-card" style="margin-bottom: 0; padding: 20px; text-align: center; border: 1px solid #00bcd4; background: rgba(0, 188, 212, 0.08);">
+                    <h4 style="color: #00bcd4; margin: 0 0 5px 0;">🔗 1階カウンター席のご案内</h4>
+                    <span class="lang-nepali" style="font-size: 0.8rem; color: #ddd;">काउन्टर सिट मार्गदर्शन पेज</span>
+                </div>
+            </a>
+
+            <a href="zashiki_control.html" style="text-decoration: none; display: block;">
+                <div class="zashiki-card" style="padding: 20px; text-align: center; border: 1px solid #9c27b0; background: rgba(156, 39, 176, 0.08);">
+                    <h4 style="color: #b388ff; margin: 0 0 5px 0;">🔗 2階席へのご案内</h4>
+                    <span class="lang-nepali" style="font-size: 0.8rem; color: #ddd;">२ तल्लाको सिट मार्गदर्शन पेज</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="config-card" style="border-left-color: #00bcd4; margin-top: 35px;">
+            <h3 style="color: #00bcd4;">【STEP 1】おしぼり / ओशिबोरी (Towel)</h3>
+            <p style="margin: 0; font-weight: bold; line-height: 1.6;">
+                必ず広げてお渡しします。半分に折られている<span style="color: #ffeb3b;">「折り目」</span>側をお客様の方へ向けて差し出してください。<br>
+                <span style="color: #00bcd4; font-size: 0.9rem;">（※カウンター席では右側からお渡しします）</span>
+            </p>
+            <p style="margin: 10px 0 0 0; border-top: 1px dashed #555; padding-top: 10px;">
+                <span class="lang-nepali" style="color: #fff; font-weight: bold;">ओशिबोरी अनिवार्य रूपमा खोलेर दिनुहोस्। दोबारेको भाग (Folded edge) ग्राहक तर्फ पारेर दिनुहोस्। (※ काउन्टर सिटमा भने दायाँ तर्फबाट दिनुहोस्)</span>
+            </p>
+        </div>
+
+        <div class="config-card" style="border-left-color: #4caf50;">
+            <h3 style="color: #4caf50;">【STEP 2 & 3】システム案内 / ड्रिङ्क सिस्टम</h3>
+            
+            <div class="talk-card">
+                <h4 style="color: #4caf50; margin-bottom: 5px;">🗣️ トーク例</h4>
+                <p style="font-size: 1.05rem; color: #ffeb3b; font-weight: bold; margin-bottom: 5px;">
+                    「お飲み物は、【飲み放題】と【単品】のどちらになさいますか？」
+                </p>
+                <span class="lang-romaji">"Nomihono wa, 【Nomihoudai】 to 【Tanpin】 no dochira ni nasaimasu ka?"</span>
+                <span class="lang-nepali" style="color: #ddd; display: block; margin-top: 5px;">(पेय पदार्थ 'नोमिहौडाई' (All-you-can-drink) वा 'तानपिन' (Single order) कुन चाहनुहुन्छ?)</span>
+            </div>
+
+            <div class="course-box" style="border-left: 3px solid #ffeb3b;">
+                <h4 style="color: #ffeb3b; margin: 0 0 10px 0;">▶ 【飲み放題】を選ばれた場合 / 'नोमिहौडाई' रोज्नुभयो भने</h4>
+                <p style="margin: 0 0 8px 0;">
+                    <span class="badge-info">料金 / शुल्क</span> <strong>90分 2,099円（クーポン利用時は 1,899円）</strong><br>
+                    <span class="lang-nepali" style="padding-left: 10px;">९० मिनेटको २०९९ येन (कुपन भएमा १८९९ येन)</span>
+                </p>
+                <p style="margin: 0 0 8px 0; border-top: 1px dashed #444; padding-top: 8px;">
+                    <span class="badge-info">案内 / जानकारी</span> <strong>終了時間を具体的に伝える</strong>（例：「19時30分終了となります」）<br>
+                    <span class="lang-nepali" style="padding-left: 10px;">समाप्त हुने समय हिसाब गरेर स्पष्ट भन्नुहोस्। (जस्तै: "१९:३० मा समाप्त हुन्छ")</span>
+                </p>
+                <p style="margin: 0; border-top: 1px dashed #444; padding-top: 8px;">
+                    <span class="badge-info" style="background:#ff5722; color:#fff;">注意 / ध्यान दिनुहोस्</span> <strong>満席時は2時間制になる場合があります。</strong><br>
+                    <span class="lang-nepali" style="padding-left: 10px;">पसल भरिभराउ भएको बेला २ घण्टाको समय सीमा हुन सक्छ।</span>
+                </p>
+            </div>
+
+            <div class="course-box" style="border-left: 3px solid #ccc; margin-top: 15px;">
+                <h4 style="color: #ccc; margin: 0 0 10px 0;">▶ 【単品】を選ばれた場合 / 'तानपिन' (Single order) रोज्नुभयो भने</h4>
+                <p style="margin: 0;">
+                    <span class="badge-info" style="background:#ff5722; color:#fff;">注意 / ध्यान दिनुहोस्</span> <strong>満席時は2時間制になる場合があります。</strong><br>
+                    <span class="lang-nepali" style="padding-left: 10px;">पसल भरिभराउ भएको बेला २ घण्टाको समय सीमा हुन सक्छ।</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="tessoku-card">
+            <h3 style="color: #f44336; margin-top: 0; font-size: 1.2rem; border-bottom: 1px solid rgba(244,67,54,0.3); padding-bottom: 5px;">
+                ⚠️ 重要 ルールとお願い / महत्त्वपूर्ण नियम र अनुरोध
+            </h3>
+
+            <ul style="padding-left: 0; list-style: none; margin: 15px 0 0 0;">
+                <li>
+                    <strong style="color: #ff5722; font-size: 1.1rem;">① 飲み放題の混在はNG！（全員同じコースで）</strong>
+                    <span class="lang-nepali" style="margin-top: 2px; font-weight: bold; color: #fff;">एउटै ग्रुपमा एकजनाले 'नोमिहौडाई' र अर्कोले 'तानपिन' गर्न मिल्दैन। (सबैले एउटै कोर्ष लिनुपर्छ)</span>
+                </li>
+                
+                <li style="margin-top: 20px; border-top: 1px dashed rgba(244,67,54,0.2); padding-top: 15px;">
+                    <strong style="color: #ffeb3b; font-size: 1.1rem;">② 単品のお客様は「お1人様ワンドリンク制」です。</strong>
+                    <span class="lang-nepali" style="margin-top: 2px; color: #ddd;">'तानपिन' (Single order) गर्ने ग्राहकले अनिवार्य रूपमा "एक व्यक्ति, एक ड्रिङ्क" अर्डर गर्नैपर्छ।</span>
+                </li>
+
+                <li style="margin-top: 20px; border-top: 1px dashed rgba(244,67,54,0.2); padding-top: 15px;">
+                    <strong style="color: #4caf50; font-size: 1.1rem;">③ フードは「【なるべく！】お1人様1品」お願いしています。</strong>
+                    <span class="lang-nepali" style="margin-top: 2px; color: #ddd;">खानाको बारेमा: "कृपया कम्तिमा पनि एक व्यक्ति, एक परकार (Food) अर्डर गरिदिनुहोस्" भनी अनुरोध गर्नुहोस्।</span>
+                </li>
+            </ul>
         </div>
 
         <a href="index.html" class="back-link">← ホール業務ポータルに戻る</a>
