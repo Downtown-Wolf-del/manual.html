@@ -1,41 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2階 座敷編 席コントロール | 下町ウルフ</title>
+    <title>2階座敷・シーティングコントロールマニュアル | 下町ウルフ</title>
     <style>
         body { 
             margin: 0; padding: 20px; font-family: sans-serif; color: #fff; line-height: 1.6; 
+            /* ホールフォルダ内から背景画像を参照 */
             background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('2025_11_18_ウルフ1379-6.jpg'); 
             background-size: cover; background-position: center; background-attachment: fixed; 
         }
-        .container { max-width: 850px; margin: 0 auto; background: rgba(30, 30, 30, 0.95); padding: 30px; border-radius: 15px; border-top: 5px solid #c5a059; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .container { max-width: 850px; margin: 0 auto; background: rgba(30, 30, 30, 0.95); padding: 30px; border-radius: 15px; border-top: 5px solid #9c27b0; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
         
-        .main-title { text-align: center; color: #c5a059; margin-bottom: 5px; font-size: 1.8rem; }
-        .sub-title { text-align: center; color: #aaa; margin-bottom: 30px; font-size: 0.95rem; }
+        .main-title { text-align: center; color: #b388ff; margin-bottom: 5px; font-size: 1.8rem; font-weight: bold; }
+        .sub-title { text-align: center; color: #aaa; margin-bottom: 30px; font-size: 0.95rem; line-height: 1.4; }
         
-        h2 { color: #c5a059; border-bottom: 2px solid #c5a059; margin-top: 40px; padding-bottom: 8px; font-size: 1.3rem; }
+        h2 { color: #b388ff; border-bottom: 2px solid #9c27b0; margin-top: 40px; padding-bottom: 8px; font-size: 1.3rem; }
+        h3 { color: #ffeb3b; font-size: 1.15rem; margin-top: 0; margin-bottom: 10px; }
+        h4 { margin: 0 0 10px 0; font-size: 1.05rem; }
         
-        /* リスト・カードの装飾 */
-        .config-card { background: rgba(255,255,255,0.03); padding: 20px; border-radius: 10px; border-left: 4px solid #c5a059; margin-top: 15px; }
-        .config-card li { margin-bottom: 15px; list-style-type: none; }
-        .config-card li:last-child { margin-bottom: 0; }
+        /* 概要・目的エリア（紫の枠線） */
+        .overview-card { background: rgba(156, 39, 176, 0.08); border: 2px dashed #9c27b0; padding: 20px; border-radius: 10px; margin-bottom: 30px; }
         
-        /* 席番号の強調 */
-        .seat-box { background: #333; color: #ffeb3b; padding: 2px 8px; border-radius: 4px; font-weight: bold; border: 1px solid #555; }
-        .seat-alert { background: #ff5722; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+        /* 各セクションのカード装飾 */
+        .config-card { background: rgba(255,255,255,0.03); padding: 20px; border-radius: 10px; border-left: 4px solid #9c27b0; margin-top: 20px; }
         
-        .lang-romaji { display: block; color: #ccc; font-size: 0.85rem; font-style: italic; margin-top: 2px; }
-        .lang-nepali { display: block; color: #aaa; font-size: 0.85rem; margin-top: 2px; }
+        /* 人数別の案内スタイル */
+        .seating-box { background: rgba(0, 0, 0, 0.3); border: 1px solid #555; padding: 20px; border-radius: 8px; margin-top: 15px; }
+        .seating-box.best { border-left: 4px solid #00bcd4; background: rgba(0, 188, 212, 0.02); }
+        .seating-box.standard { border-left: 4px solid #ffeb3b; background: rgba(255, 235, 59, 0.02); }
         
-        /* 案内順序のフロー表現 */
-        .flow-container { display: flex; align-items: center; justify-content: space-between; background: #222; padding: 20px; border-radius: 10px; margin-top: 15px; border: 1px solid #444; text-align: center; }
-        .flow-step { flex: 1; background: #333; padding: 10px; border-radius: 6px; border: 1px solid #555; }
-        .flow-step.main { background: rgba(197, 160, 89, 0.2); border-color: #c5a059; }
-        .flow-step.last { background: rgba(255, 87, 34, 0.1); border-color: #ff5722; }
-        .flow-arrow { padding: 0 10px; color: #c5a059; font-weight: bold; font-size: 1.2rem; }
+        /* 配慮・コントロール用小カード */
+        .control-box { background: rgba(255,255,255,0.02); border-left: 4px solid #ff9800; padding: 15px; border-radius: 8px; margin-top: 15px; }
+        .control-box.ok { border-left-color: #4caf50; background: rgba(76, 175, 80, 0.02); }
+        
+        /* トーク用カード（黒） */
+        .talk-card { background: rgba(0, 0, 0, 0.4); border-left: 4px solid #00bcd4; padding: 15px; border-radius: 8px; margin-top: 15px; }
+        .talk-row { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dashed #444; }
+        .talk-row:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        
+        /* 卓番号・コントロールバッジ */
+        .badge-table { background: #9c27b0; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 1.1rem; font-weight: bold; display: inline-block; margin: 0 4px; vertical-align: middle; }
+        .badge-table.best-target { background: #00bcd4; color: #000; }
+        .badge-table.sub-target { background: #777; color: #fff; }
+        .badge-ctrl { background: #ff5722; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 0.85rem; font-weight: bold; display: inline-block; margin-right: 5px; }
+        .badge-ctrl.ok { background: #4caf50; }
+        
+        .lang-romaji { display: block; color: #ccc; font-size: 0.85rem; font-style: italic; margin-top: 4px; line-height: 1.4; }
+        .lang-nepali { display: block; color: #aaa; font-size: 0.85rem; margin-top: 4px; line-height: 1.4; }
         
         .back-link { display: block; margin-top: 40px; text-align: center; color: #c5a059; text-decoration: none; font-weight: bold; background: #333; padding: 15px; border-radius: 8px; transition: 0.3s; }
         .back-link:hover { background: #c5a059; color: #000; }
@@ -43,159 +56,188 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="main-title">お席のご案内マニュアル</h1>
+        <h1 class="main-title">【ウルフ流】シーティングコントロールマニュアル</h1>
         <div class="sub-title">
-            [Urufu-ryuu] Oseki no goannai (Seki kontorooru) manyuaru<br>
-            [वुल्फ स्टाइल] सिट व्यवस्थापन (सिट कन्ट्रोल) म्यानुअल
+            【2階 座敷編】 ～人数とお客様の特性に応じたベスト配置～<br>
+            <span style="font-size: 0.85rem; color: #888;">[Urufu-ryuu] Shiitingu kontorooru manyuaru [2-kai Zashiki-hen] / [वुल्फ स्टाइल] सिट व्यवस्थापन (सिट कन्ट्रोल) म्यानुअल [दोस्रो तला जासिकी]</span>
         </div>
 
-        <h2>■ 2枚目：【2階 座敷編】 ～人数とお客様の特性に応じたベスト配置～</h2>
-        <p>
-            2-maime: [2-kai Zashiki-hen] ~Ninzuu to okyakusama no tokusei ni oojita besuto haichi~<br>
-            <span class="lang-nepali">दोस्रो पृष्ठ: [दोस्रो तला जासिकी] ~ग्राहकको संख्या र विशेषता अनुसार उत्कृष्ट सिट व्यवस्थापन~</span>
-        </p>
+        <div class="overview-card">
+            <p style="margin: 0; font-weight: bold; font-size: 1.05rem; line-height: 1.7;">
+                2階の座敷席は、1階のカウンター席と異なり「スタッフの目が届きにくい」「動線が限られる」という特徴があります。機械的に席を埋めるのではない、【スタッフの働きやすさ（動線確保）】と【お客様の居心地】を両立させる「シーティングコントロール」を徹底しましょう。<br>
+                <span class="lang-romaji" style="font-weight: normal; color: #ccc; margin-top: 5px;">(2-kai no zashiki-seki wa, 1-kai no kauntaa-seki to kotonari "sutaffu no me ga todoki-nikui" "dousen ga kagirareru" toiu tokuchou ga arimasu. Kikaiteki ni seki o umeru no de wa naku, [sutaffu no hataraki-yasusa (dousen kakuhu)] to [okyakusama no igokochi] o ryouritu saseru "shiitingu kontorooru" o tettei shimashou.)</span>
+                <span class="lang-nepali" style="font-weight: normal; color: #ddd; margin-top: 5px;">(दोस्रो तलाको जासिकी सिट, पहिलो तलाको काउन्टर सिटभन्दा फरक छ। यहाँ "स्टाफको आँखा नपुग्ने" र "हिँड्ने बाटो साँघुरो हुने" विशेषता हुन्छ। त्यसैले, खाली छ भन्दैमा जथाभाभी सिटमा नराखी, [स्टाफलाई काम गर्न सजिलो (बाटो खाली राख्ने)] र [ग्राहकलाई आरामदायी हुने] गरी दुवै कुरालाई ध्यान दिएर सिट व्यवस्थापन (सिट कन्ट्रोल) गर्नुपर्छ।)</span>
+            </p>
+        </div>
 
         <h2>■ 1. 人数別の基本配置（優先順位）</h2>
-        <p>
-            1. Ninzuu-betsu no kihon haichi (Yuusen jun'i)<br>
-            <span class="lang-nepali">१. ग्राहकको संख्या अनुसार आधारभूत सिट व्यवस्थापन (प्राथमिकता)</span>
+        <p style="color: #aaa; font-size: 0.9rem; margin-top: -5px; margin-bottom: 15px;">
+            1. Ninzuu-betsu no kihon haichi (Yuusen jun'i) / १. ग्राहकको संख्या अनुसार आधारभूत सिट व्यवस्थापन (प्राथमिकता)
         </p>
         
         <div class="config-card">
-            <ul>
-                <li>
-                    <strong>・2～3名様でのご案内：<span class="seat-box">【A1】</span> 、（<span class="seat-alert">【A3】</span>は最終案内）</strong>
-                    <span class="lang-romaji">(2~3-mei-sama de no goannai: [A1], ([A3] wa saishuu annai))</span>
-                    <span class="lang-nepali">(२-३ जनाको लागि: [A1], ([A3] चाहीं अन्तिम विकल्प)</span>
-                </li>
-                <li style="margin-top: 25px;">
-                    <strong>・3～4名様でのご案内：<span class="seat-box">【A2】</span>、<span class="seat-box">【A4】</span>、<span class="seat-box">【A5】</span></strong>
-                    <span class="lang-romaji">(3~4-mei-sama de no goannai: [A2], [A4], [A5])</span>
-                    <span class="lang-nepali">(३-४ जनाको लागि: [A2], [A4], [A5])</span>
-                </li>
-            </ul>
-        </div>
+            <p style="font-weight: bold; margin-bottom: 15px;">
+                お客様の人数に合わせて、まずはベースとなる席を頭に入れます。<br>
+                <span class="lang-romaji" style="font-weight: normal;">(Okyakusama no ninzuu ni awasete, mazu wa beesu to naru seki o atama ni iremasu.)</span>
+                <span class="lang-nepali" style="font-weight: normal;">(ग्राहकको संख्या अनुसार, सबैभन्दा पहिले कुन सिटमा राख्ने भन्ने कुरा दिमागमा राख्नुहोस्।)</span>
+            </p>
+            
+            <div class="seating-box best">
+                <h3 style="color: #00bcd4; margin-bottom: 8px;">👥 2～3名様でのご案内</h3>
+                <p style="margin: 0; font-size: 1.1rem; font-weight: bold;">
+                    <span class="badge-type" style="background:#00bcd4; color:#000;">ベスト席</span> <span class="badge-table best-target">A1</span> がベスト！
+                    <span style="font-size: 0.9rem; color: #aaa; font-weight: normal; margin-left: 10px;">（※ <span class="badge-table sub-target" style="font-size:0.8rem; padding:1px 5px;">A3</span> は最終案内）</span>
+                </p>
+                <span class="lang-romaji">(2~3-mei-sama de no goannai: [A1] ga besuto (* [A3] wa saishuu annai))</span>
+                <span class="lang-nepali" style="color: #fff; font-weight: bold; margin-top: 5px;">(२-३ जनाको लागि: [A1] सबैभन्दा राम्रो (* [A3] चाहीं अन्तिम विकल्प)</span>
+            </div>
 
-        <h2>■ 2. 2階席のご案内の順序</h2>
-        <p>
-            2. 2-kai seki no goannai no junjo<br>
-            <span class="lang-nepali">२. दोस्रो तलाको सिटमा लैजाने क्रम</span>
-        </p>
-        <p>
-            フロアの状況を見ながら、以下の順番で席を埋めていくことを徹底します。<br>
-            <span class="lang-romaji">(Furoa no joukyou o minagara, ika no junban de seki o umete iku koto o tettei shimasu.)</span>
-            <span class="lang-nepali">(फ्लोरको अवस्था हेर्दै, तलको क्रम अनुसार सिट भर्दै जानुपर्छ।)</span>
-        </p>
-
-        <div class="flow-container">
-            <div class="flow-step main">
-                <strong style="color: #ffeb3b; font-size: 1.1rem;">【A2】</strong>
-                <span class="lang-nepali" style="font-size: 0.7rem;">पहिलो</span>
-            </div>
-            <div class="flow-arrow">➔</div>
-            <div class="flow-step main">
-                <strong style="color: #ffeb3b; font-size: 1.1rem;">【A4】、【A5】</strong>
-            </div>
-            <div class="flow-arrow">➔</div>
-            <div class="flow-step">
-                <strong style="font-size: 1.1rem;">【A1】</strong>
-            </div>
-            <div class="flow-arrow">➔</div>
-            <div class="flow-step last">
-                <strong style="color: #ff5722; font-size: 1.1rem;">【A3】</strong>
-                <span class="lang-romaji" style="font-size: 0.7rem; display: block;">(Saigo)</span>
-                <span class="lang-nepali" style="font-size: 0.7rem;">अन्त्यमा</span>
+            <div class="seating-box standard">
+                <h3 style="color: #ffeb3b; margin-bottom: 8px;">👥👥 3～4名様でのご案内</h3>
+                <p style="margin: 0; font-size: 1.1rem; font-weight: bold;">
+                    優先席： <span class="badge-table">A2</span> ・ <span class="badge-table">A4</span> ・ <span class="badge-table">A5</span>
+                </p>
+                <span class="lang-romaji">(3~4-mei-sama de no goannai: [A2], [A4], [A5])</span>
+                <span class="lang-nepali" style="color: #fff; font-weight: bold; margin-top: 5px;">(३-४ जनाको लागि: [A2], [A4], [A5])</span>
             </div>
         </div>
 
-        <h2>■ 3. 【A1】と【A3】に関する重要注意点（動線＆居心地）</h2>
-        <p>
-            3. [A1] to [A3] ni kansuru juuyou chuuiten (Dousen & igokochi)<br>
-            <span class="lang-nepali">३. [A1] र [A3] को बारेमा महत्त्वपूर्ण कुराहरू (स्टाफको हिँडडुल र ग्राहकको आराम)</span>
+        <h2>■ 2. 2階席のシーティング 鉄則ルート（埋めていく順番）</h2>
+        <p style="color: #aaa; font-size: 0.9rem; margin-top: -5px; margin-bottom: 15px;">
+            2. 2-kai seki no shiitingu tessoku ruuto (Umete iku junban) / २. दोस्रो तलाको सिटमा लैजाने मुख्य नियम (सिट भर्दै जाने क्रम)
+        </p>
+        
+        <div class="config-card" style="border-left-color: #00bcd4; background: rgba(0, 188, 212, 0.02);">
+            <p style="font-weight: bold; margin-bottom: 20px;">
+                フロアの状況を見ながら、必ず以下の順番で席を埋めていってください。<br>
+                <span class="lang-romaji" style="font-weight: normal;">(Furoa no joukyou o minagara, kanarazu ika no junban de seki o umete itte kudasai.)</span>
+                <span class="lang-nepali" style="font-weight: normal;">(फ्लोरको अवस्था हेर्दै, अनिवार्य रूपमा तलको क्रम अनुसार सिट भर्दै जानुहोस्।)</span>
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 10px; background: rgba(0,0,0,0.4); padding: 20px; border-radius: 8px; text-align: center; border: 1px solid #444;">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
+                    <div style="background: #4caf50; color: #fff; padding: 10px 20px; border-radius: 6px; font-weight: bold; font-size: 1.2rem;">
+                        【A2】<span style="font-size: 0.8rem; block; color: #fff; display: block;">最初 / Pahilo</span>
+                    </div>
+                    <div style="color: #00bcd4; font-size: 1.5rem; font-weight: bold;">➔</div>
+                    <div style="background: #9c27b0; color: #fff; padding: 10px 20px; border-radius: 6px; font-weight: bold; font-size: 1.2rem;">
+                        【A4】・【A5】
+                    </div>
+                    <div style="color: #00bcd4; font-size: 1.5rem; font-weight: bold;">➔</div>
+                    <div style="background: #ff9800; color: #fff; padding: 10px 20px; border-radius: 6px; font-weight: bold; font-size: 1.2rem;">
+                        【A1】
+                    </div>
+                    <div style="color: #00bcd4; font-size: 1.5rem; font-weight: bold;">➔</div>
+                    <div style="background: #f44336; color: #fff; padding: 10px 20px; border-radius: 6px; font-weight: bold; font-size: 1.2rem;">
+                        【A3】<span style="font-size: 0.8rem; block; color: #fff; display: block;">最後 / Antyama</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>■ 3. 【A1】と【A3】の重要注意点（動線 ＆ 居心地）</h2>
+        <p style="color: #aaa; font-size: 0.9rem; margin-top: -5px; margin-bottom: 15px;">
+            3. [A1] to [A3] no juuyou chuuiten (Dousen & igokochi) / ३. [A1] र [A3] को बारेमा महत्त्वपूर्ण कुराहरू (स्टाफको हिँडडुल र ग्राहकको आराम)
+        </p>
+        
+        <p style="font-weight: bold; font-size: 1.05rem; color: #ffeb3b;">
+            この2つの席のコントロールミスは、「スタッフの業務パンク」や「お客様からのクレーム」に直結します。<br>
+            <span class="lang-romaji" style="font-weight: normal; color: #ccc;">(Kono futatu no seki no kontorooru misu wa, "sutaffu no gyoumu panku" ya "okyakusama kara no kureemu" ni chokketu shimasu.)</span>
+            <span class="lang-nepali" style="font-weight: normal; color: #aaa;">(यी दुईवटा सिट व्यवस्थापनमा गल्ती भएमा, "स्टाफलाई कामको धेरै लोड हुने" र "ग्राहकबाट कम्प्लेन आउने" सम्भावना धेरै हुन्छ।)</span>
         </p>
 
-        <div class="config-card" style="border-left-color: #ffeb3b; margin-bottom: 25px;">
-            <h3 style="color: #ffeb3b; margin-top: 0; font-size: 1.1rem;">
-                【A1の注意点】（スタッフの動線）<br>
-                <span style="font-size: 0.8rem; color: #ccc; font-weight: normal;">([A1 no chuuiten] (Sutaffu no dousen))</span>
-                <span class="lang-nepali" style="font-size: 0.8rem; font-weight: normal;">[A1 को ध्यान दिनुपर्ने कुरा] (स्टाफको हिँडडुल)</span>
-            </h3>
-            <p style="margin-bottom: 0;">
-                2階の入り口付近のため、4名様が入るとスタッフの通り道が狭くなり、配膳や片付けの邪魔になります。<strong>【2〜3名様でのご案内がベスト】</strong>です。<br>
-                <span class="lang-romaji">(2-kai no iriguchi fukin no tame, 4-mei-sama ga hairu to sutaffu no toorimichi ga semaku nari, haizen ya katazuke no jama ni narimasu. [2~3-mei-sama de no goannai ga besuto] desu.)</span>
-                <span class="lang-nepali">(दोस्रो तलाको प्रवेशद्वार नजिकै भएकोले, ४ जना बस्दा स्टाफको बाटो साँघुरो हुन्छ र खाना पस्कन र भाँड्डाहरू उठाउन गाह्रो हुन्छ。 [२-३ जनालाई राख्नु सबैभन्दा राम्रो] हो。)</span>
-            </p>
+        <div class="config-card" style="border-left-color: #ff9800; background: rgba(255, 152, 0, 0.03);">
+            <h3 style="color: #ff9800; font-size: 1.2rem;">⚠️【A1】の注意点：スタッフ動線の確保</h3>
+            <p style="margin: 10px 0;"><span class="badge-type" style="background:#555;">特徴</span> 2階の入り口付近にあるお席です。 / (2-kai no iriguchi fukin ni aru oseki desu.)</p>
+            <p style="margin: 10px 0;"><span class="badge-type" style="background:#f44336;">リスク</span> 4名様をご案内してしまうと、スタッフの通り道が極端に狭くなり、配膳や片付けの邪魔、衝突事故に繋がります。</p>
+            <p style="margin: 10px 0;"><span class="badge-type" style="background:#4caf50;">対策</span> <strong>原則として【2〜3名様でのご案内をベスト】としてください。</strong></p>
         </div>
 
-        <div class="config-card" style="border-left-color: #ff5722; background: rgba(255, 87, 34, 0.05); margin-bottom: 25px;">
-            <h3 style="color: #ff5722; margin-top: 0; font-size: 1.1rem;">
-                【A3の注意点】（★最後にご案内するお席★）<br>
-                <span style="font-size: 0.8rem; color: #ccc; font-weight: normal;">([A3 no chuuiten] (★Saigo ni goannai suru oseki★))</span>
-                <span class="lang-nepali" style="font-size: 0.8rem; font-weight: normal;">[A3 को ध्यान दिनुपर्ने कुरा] (★सबैभन्दा अन्त्यमा लैजाने सिट★)</span>
-            </h3>
-            <p style="margin-bottom: 0;">
-                A3はフロアの中央に位置しているため、周りの目が気になりやすく、お客様としてはあまり落ち着けないお席です。また、4名様以上が入ると通路にはみ出して他のお客様やスタッフが通りづらくなります。そのため、<strong>【A3は他のお席がすべて埋まった後に、最後に通す席】</strong>として徹底してください。<br>
-                <span class="lang-romaji">(A3 wa furoa no chuuou ni ichi shite iru tame, mawari no me ga kininari-yasuku, okyakusama to shite wa amari ochitsukenai oseki desu. Mata, 4-mei-sama ijou ga hairu to tsuuro ni hamidashite hoka no okyakusama ya sutaffu ga toori-zuraku narimasu. Sonotame, [A3 wa hoka no oseki ga subete umatta ato ni, saigo ni toosu seki] to shite tettei shite kudasai.)</span>
-                <span class="lang-nepali">(A3 सिट,|फ्लोरको बीचमा भएकोले, वरपरको नजर पर्छ र ग्राहकहरूलाई त्यति शान्त महसुस हुँदैन। साथै, ४ जनाभन्दा बढी बस्दा बाटो छेकिन्छ र अरू ग्राहक र स्टाफलाई हिँड्न गाह्रो हुन्छ। त्यसैले, [A3 अरू सबै सिट भरिएपछि मात्र अन्त्यमा लैजाने सिट] हो भन्ने कुरा पक्का गर्नुहोस्।)</span>
-            </p>
+        <div class="config-card" style="border-left-color: #f44336; background: rgba(244, 67, 54, 0.03);">
+            <h3 style="color: #f44336; font-size: 1.2rem;">⚠️【A3】の注意点：★最後にご案内するお席★</h3>
+            <p style="margin: 10px 0;"><span class="badge-type" style="background:#555;">特徴</span> フロアの中央に位置しているお席です。</p>
+            <p style="margin: 10px 0;"><span class="badge-type" style="background:#f44336;">リスク</span> 周りからの視線で落ち着かない（居心地）、人数が多いと通路へ荷物がはみ出して動線を塞ぐ（動線）。</p>
+            <p style="margin: 10px 0;"><span class="badge-type" style="background:#4caf50;">対策</span> <strong>「A3は、他のお席がすべて埋まった後に、一番最後に通す席」を共通認識に。</strong></p>
         </div>
 
-        <h2>■ 4. 「お客様を見て判断する」具体例</h2>
-        <p>
-            4. "Okyakusama o mite handan suru" gutairei<br>
-            <span class="lang-nepali">४. "ग्राहकलाई हेरेर निर्णय गर्ने" उदाहरणहरू</span>
+        <h2>■ 4. 「お客様の特性」を見て判断する具体例</h2>
+        <p style="color: #aaa; font-size: 0.9rem; margin-top: -5px; margin-bottom: 15px;">
+            4. "Okyakusama no tokusei" o mite handan suru gutairei / ४. "ग्राहकको विशेषता" हेरेर निर्णय गर्ने उदाहरणहरू
+        </p>
+        
+        <p style="font-weight: bold; margin-bottom: 25px;">
+            マニュアルをベースにしつつも、目の前のお客様を観察し、現場で柔軟に席をコントロールします。<br>
+            <span class="lang-romaji" style="font-weight: normal;">(Manyuaru o beesu ni shitutu mo, me no mae no okyakusama o kansatu shi, genba de juunan ni seki o kontorooru shimasu.)</span>
+            <span class="lang-nepali" style="font-weight: normal;">(म्यानुअल पालना गर्दै, आफ्नो अगाडिको ग्राहकलाई हेरेर अवस्था अनुसार सही सिट व्यवस्थापन गर्नुपर्छ।)</span>
         </p>
 
-        <div class="config-card" style="border-left-color: #00bcd4; margin-bottom: 25px;">
-            <h3 style="color: #00bcd4; margin-top: 0; font-size: 1.1rem;">
-                【体格への配慮】（例：体の大きな男性3名様など）<br>
-                <span style="font-size: 0.8rem; color: #ccc; font-weight: normal;">([Taikaku e no hairyo] (Rei: Karada no ookina dansei 3-mei-sama nado))</span>
-                <span class="lang-nepali" style="font-size: 0.8rem; font-weight: normal;">[शरीरको आकार अनुसार] (उदाहरण: ठूلو शरीर भएका ३ जना पुरुष)</span>
-            </h3>
-            <p style="margin-bottom: 0;">
-                3名だからといって機械的にA1やA2、空いているからとA3に通すのではなく、2階で一番広くてゆとりがある<strong>【A5】</strong>へご案内します。<br>
-                <span class="lang-romaji">(3-mei dakara to itte kikaiteki ni A1 ya A2, aiteiru kara to A3 ni toosu no de wa naku, 2-kai de ichiban hirokute yutori ga aru [A5] e goannai shimasu.)</span>
-                <span class="lang-nepali">(३ जना हुनुहुन्छ भन्दैमा A1 वा A2 मा लैजाने वा खाली छ भन्दैमा A3 मा लैजाने होइन, दोस्रो तलामा सबैभन्दा फराकिलो [A5] मा लैजानुहोस्।)</span>
-            </p>
+        <div class="config-card" style="border-left-color: #00bcd4;">
+            <h3>①【体格への配慮】（例：体の大きな男性3名様など）</h3>
+            <p style="color: #aaa; font-size: 0.85rem; margin-top: -5px;">1. [Taikaku e no hairyo] / १. [शरीरको आकार अनुसार ध्यान दिने]</p>
+            
+            <div class="control-box">
+                <div><span class="badge-ctrl">NGな対応</span> 「3名だから」と機械的にA1やA2に通したり、「空いているから」と狭くなりやすいA3に通す。</div>
+                <span class="lang-romaji">(NG na kontorooru: "3-mei dakara" to kikaiteki ni A1 ya A2 ni toosatiri, "aite iru kara" to semaku nari-yasui A3 ni toosu.)</span>
+                <span class="lang-nepali">(गलत व्यवस्थापन: "३ जना हुनुहुन्छ" भन्दैमा सिधै A1 वा A2 मा लैजाने, वा "खाली छ" भन्दैमा साँघुरो हुने A3 मा लैजाने।)</span>
+            </div>
+
+            <div class="control-box ok">
+                <div><span class="badge-ctrl ok">正しい対応</span> <strong>2階で一番広くてゆとりのある <span class="badge-table">A5</span> へ優先的にご案内する。</strong></div>
+                <span class="lang-romaji">(Tadashii kontorooru: 2-kai de ichiban hirokute yutori no aru [A5] e yuusenteki ni goannai suru.)</span>
+                <span class="lang-nepali">(सही व्यवस्थापन: दोस्रो तलामा सबैभन्दा फराकिलो र ठूलो [A5] सिटमा प्राथमिकताका साथ लैजाने।)</span>
+            </div>
         </div>
 
-        <div class="config-card" style="border-left-color: #00bcd4; margin-bottom: 25px;">
-            <h3 style="color: #00bcd4; margin-top: 0; font-size: 1.1rem;">
-                【お身体・足元への配慮】（例：足が不自由そうな方、お年を召した方）<br>
-                <span style="font-size: 0.8rem; color: #ccc; font-weight: normal;">([Okarada・Ashimoto e no hairyo] (Rei: Ashi ga fujiyuusou na kata, otoshi o meshita kata))</span>
-                <span class="lang-nepali" style="font-size: 0.8rem; font-weight: normal;">[शरीर / खुट्टाको अवस्था अनुसार] (उदाहरण: खुट्टामा समस्या भएका वा वृद्ध व्यक्ति)</span>
-            </h3>
-            <p style="margin-bottom: 0;">
-                2階は座敷（靴を脱ぐ、座る・立つ動作が大変）です。ご来店時に足が悪いと判断した場合は、無理に2階へ通さず、<strong>【1階のカウンター席】</strong>をスマートに提案します。<br>
-                <span class="lang-romaji">(2-kai wa zashiki (kutsu o nugu, suwaru・tatsu dousa ga taihen) desu. Goraiten-ji ni ashi ga warui to handan shita baai wa, muri ni 2-kai e toosazu, [1-kai no kauntaa seki] o sumaato ni teian shimasu.)</span>
-                <span class="lang-nepali">(दोस्रो तला जासिकी (जुत्ता खोल्ने、बस्ने र उठ्ने काम गाह्रो) हो। पसलमा आउँदा खुट्टामा समस्या छ जस्तो लागेमा、जबरजस्ती दोस्रो तलामा नलगी、[पहिलो तलाको काउन्टर सिट] प्रस्ताव गर्नुहोस्。)</span>
-            </p>
+        <div class="config-card" style="border-left-color: #00bcd4; margin-top: 25px;">
+            <h3>②【お身体・足元への配慮】（例：足が不自由そうな方、ご高齢の方）</h3>
+            <p style="color: #aaa; font-size: 0.85rem; margin-top: -5px;">2. [Okarada・Ashimoto e no hairyo] / २. [शरीर / खुट्टाको अवस्था अनुसार ध्यान दिने]</p>
+            
+            <div class="control-box">
+                <div><span class="badge-ctrl">NGな対応</span> 予約だから、順番だからと、階段の昇り降りや「靴を脱ぐ・座る・立つ」動作が大変な2階座敷へそのまま通す。</div>
+                <span class="lang-romaji">(NG na kontorooru: Yoyaku dakara, junban dakara to, kaidan no nobori-oriri ya "kutsu o nugu・suwaru・tatsu" dousa ga taihen na 2-kai zashiki e sonomama toosu.)</span>
+                <span class="lang-nepali">(गलत व्यवस्थापन: बुकिङ छ वा पालो आएको छ भन्दैमा, भर्याङ चढ्न-ओर्लन र "जुत्ता खोल्ने, बस्ने, उठ्ने" काम गाह्रो हुने दोस्रो तला जासिकीमा सिधै लैजाने।)</span>
+            </div>
+
+            <div class="control-box ok">
+                <div><span class="badge-ctrl ok">正しい対応</span> <strong>ご来店時に足元が大変そうだと気づいたら、無理に2階へ通さず、【1階のカウンター席】をスマートに提案する。</strong></div>
+                <span class="lang-romaji">(Tadashii kontorooru: Goraiten-ji ni ashimoto ga taihensou da to kituitara, muri ni 2-kai e toosazu, [1-kai no kauntaa-seki] o sumaato ni teian suru.)</span>
+                <span class="lang-nepali">(सही व्यवस्थापन: पसलमा आउँदा खुट्टामा समस्या छ जस्तो लागेमा, जबरजस्ती दोस्रो तलामा नलगी, [पहिलो तलाको काउन्टर सिट] राम्रोसँग प्रस्ताव गर्ने।)</span>
+            </div>
         </div>
 
-        <h2>■ 5. 現場でのリアルな声掛け例</h2>
-        <p>
-            5. Genba de no riaru na koekake rei<br>
-            <span class="lang-nepali">५. काम गर्ने ठाउँमा बोलिने वास्तविक वाक्यहरू</span>
+
+        <h2>■ 5. 現場でのリアルな声掛け例（トークスクリプト）</h2>
+        <p style="color: #aaa; font-size: 0.9rem; margin-top: -5px; margin-bottom: 15px;">
+            5. Genba de no riaru na koekake rei / ५. काम गर्ने ठाउँमा बोलिने वास्तविक वाक्यहरू
+        </p>
+        <p style="font-weight: bold; color: #ffeb3b; font-size: 0.95rem;">
+            お客様に「配慮されている」と感じていただくための、ポジティブな言い回しです。<br>
+            <span class="lang-romaji" style="font-weight: normal; color: #ccc;">(Okyakusama ni "hairoyo sareteti ru" to kanjite itadaku tame no, pojitibu na iimawashi desu.)</span>
+            <span class="lang-nepali" style="font-weight: normal; color: #aaa;">(ग्राहकलाई "हाम्रो ख्याल राखिएको छ" भन्ने महसुस गराउनका लागि राम्रोसँग बोल्ने तरिका हो।)</span>
         </p>
 
-        <div class="config-card" style="border-left-color: #e91e63; background: rgba(233, 30, 99, 0.03);">
-            <ul style="padding-left: 0; margin: 0; list-style: none;">
-                <li>
-                    <strong style="color: #e91e63;">【体格の大きな方をA5へお通しする時】</strong>
-                    <span style="font-size: 0.8rem; color: #ccc; display: block; margin-bottom: 5px;">([Taikaku no ookina kata o A5 e otooshi suru toki])</span>
-                    <p style="font-size: 1.05rem; color: #ffeb3b; margin: 5px 0;">「3名様ですね！ちょうど2階の広いお席空いてるんで、そっち広々使っちゃってください！」</p>
-                    <span class="lang-romaji">("3-mei-sama desu ne! Choudo 2-kai no hiroi oseki aiterun de, sotchi hirobiro tsukatchatte kudasai!")</span>
-                    <span class="lang-nepali">("३ जना हुनुहुन्छ है! ठ्याक्कै दोस्रो तलाको ठूलो सिट खाली छ, त्यहाँ आरामले बस्नुहोस्!")</span>
-                </li>
-                
-                <li style="margin-top: 30px;">
-                    <strong style="color: #e91e63;">【足が悪い方に1階を提案する時】</strong>
-                    <span style="font-size: 0.8rem; color: #ccc; display: block; margin-bottom: 5px;">([Ashi ga warui kata ni 1-kai o teian suru toki])</span>
-                    <p style="font-size: 1.05rem; color: #ffeb3b; margin: 5px 0;">「2階がお座敷になっちゃうので、もしよろしければ1階のカウンター席の方がラクに座っていただけると思うのですが、いかがですか？」</p>
-                    <span class="lang-romaji">("2-kai ga ozashiki ni natchau node, moshi yoroshikereba 1-kai no kauntaa seki no hou ga raku ni suwatte itadakeru to omou no desu ga, ikaga desu ka?")</span>
-                    <span class="lang-nepali">("दोस्रो तला जासिकी (भुइँमा बस्ने) छ, त्यसैले यदि हुन्छ भने पहिलो तलाको काउन्टर सिटमा बढी सजिलो हुन्छ जस्तो लाग्छ, के गरौं?")</span>
-                </li>
-            </ul>
+        <div class="talk-card" style="border-left-color: #9c27b0;">
+            <h4 style="color: #b388ff;">💡 体格の大きな方をA5へお通しする時</h4>
+            <p style="color: #aaa; font-size: 0.85rem; margin-top: -5px; margin-bottom: 10px;">[Taikaku no ookina kata o A5 e otooshi suru toki] / [ठूलो शरीर भएका व्यक्तिलाई A5 मा लैजाँदा]</p>
+            
+            <div class="talk-row" style="border: none; padding-bottom: 0;">
+                <div><span class="badge-type" style="background:#9c27b0;">会話例</span> <strong style="color: #ffeb3b; font-size: 1.05rem;">「3名様ですね！ちょうど2階の広いお席が空いておりますので、そちらで広々とおくつろぎください！」</strong></div>
+                <span class="lang-romaji" style="margin-top: 5px;">"3-mei-sama desu ne! Choudo 2-kai no hiroi oseki ga aite orimasu node, sotchi hirobiro to okuturogi kudasai!"</span>
+                <span class="lang-nepali" style="color: #fff; font-weight: bold; margin-top: 5px;">"३ जना हुनुहुन्छ है! ठ्याक्कै दोस्रो तलाको ठूलो सिट खाली छ, त्यहाँ आरामले बस्नुहोस्!"</span>
+                <p style="margin: 10px 0 0 0; font-size: 0.85rem; color: #00bcd4; font-weight: bold;">※「体が大きいから」という理由は一切出さず、ラッキー感・おトク感を演出します。</p>
+            </div>
+        </div>
+
+        <div class="talk-card" style="border-left-color: #ff9800; margin-top: 20px;">
+            <h4 style="color: #ff9800;">💡 足が悪い方に1階を提案する時</h4>
+            <p style="color: #aaa; font-size: 0.85rem; margin-top: -5px; margin-bottom: 10px;">[Ashi ga warui kata ni 1-kai o teian suru toki] / [खुट्टामा समस्या भएका व्यक्तिलाई पहिलो तला प्रस्ताव गर्दा]</p>
+            
+            <div class="talk-row" style="border: none; padding-bottom: 0;">
+                <div><span class="badge-type" style="background:#ff9800;">会話例</span> <strong style="color: #ffeb3b; font-size: 1.05rem;">「2階がお座敷（靴を脱いで座るタイプのお席）になってしまうのですが、もしよろしければ、1階のカウンター席の方がラクにお座りいただけるかと思います。いかがでしょうか？」</strong></div>
+                <span class="lang-romaji" style="margin-top: 5px;">"2-kai ga ozashiki (kutsu o nuguide suwaru taipu no oseki) ni natchau no desu ga, moshi yoroshikereba, 1-kai no kauntaa-seki no hou ga raku ni osuwari itadakeru ka to omoimasu. Ikaga de shou ka?"</span>
+                <span class="lang-nepali" style="color: #fff; font-weight: bold; margin-top: 5px;">"दोस्रो तला जासिकी (जुत्ता खोलेर भुइँमा बस्ने सिट) छ, त्यसैले यदि हजुरहरूलाई ठिक लाग्छ भने पहिलो तलाको काउन्टर सिटमा बस्न बढी सजिलो हुन्छ जस्तो लाग्छ। के गरौं होला?"</span>
+                <p style="margin: 10px 0 0 0; font-size: 0.85rem; color: #00bcd4; font-weight: bold;">※お客様の負担を先回りして減らす、ウルフ流のスマートなシーティング提案です。</p>
+            </div>
         </div>
 
         <a href="index.html" class="back-link">← ホール業務ポータルに戻る</a>
