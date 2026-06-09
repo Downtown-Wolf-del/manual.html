@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体調不良時の連絡ルール | 下町ウルフ</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 50px 20px; 
+            font-family: 'Helvetica Neue', sans-serif; 
+            text-align: center; 
+            /* 背景は共通のもの（文字が読みやすいよう暗めに設定） */
+            background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../2025_10_24_ウルフB-31.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed;
+            color: #fff; 
+            min-height: 100vh;
+        }
+        
+        h1 { 
+            font-size: 2.2rem; 
+            color: #c5a059; /* ウルフゴールド */
+            margin-bottom: 10px; 
+            display: inline-block;
+        }
+
+        .lead-text {
+            max-width: 750px;
+            margin: 0 auto 40px auto;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+
+        /* コンテンツを囲むメインの箱 */
+        .content-box {
+            max-width: 750px;
+            margin: 0 auto 40px auto;
+            background: rgba(40, 40, 40, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: left; /* 文章は左詰めで読みやすく */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* 各ルールのセクション */
+        .rule-section {
+            margin-bottom: 40px;
+        }
+        .rule-section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* 大見出し（1, 2, 3） */
+        h2 {
+            font-size: 1.4rem;
+            color: #fff;
+            background: linear-gradient(45deg, #1e3c72, #2a5298); /* ディープブルー */
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-left: 6px solid #c5a059;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* 緊急・最重要項目用の特大目立つボックス */
+        .emergency-box {
+            background: rgba(217, 83, 79, 0.2);
+            border: 2px solid #d9534f;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .emergency-title {
+            color: #ff6b6b;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* 箇条書き用スタイル */
+        .bullet-list {
+            margin: 0;
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+        .bullet-list li {
+            margin-bottom: 8px;
+        }
+
+        /* 注意書きや補足のボックス */
+        .alert-box {
+            background: rgba(217, 83, 79, 0.1);
+            border-left: 4px solid #d9534f;
+            padding: 12px 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .alert-title {
+            color: #ff6b6b;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* 安心感を与える協力のボックス */
+        .cooperate-box {
+            background: rgba(42, 82, 152, 0.15);
+            border-left: 4px solid #2a5298;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* メッセージボックス */
+        .message-box {
+            background: linear-gradient(135deg, rgba(197,160,89,0.15), rgba(0,0,0,0));
+            border: 1px solid #c5a059;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .message-title {
+            color: #c5a059;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* 強調文字 */
+        .highlight {
+            color: #ffdd67;
+            font-weight: bold;
+        }
+        .danger-text {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        /* 戻るボタン */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 1px solid #fff;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* スマホ対応 */
+        @media (max-width: 600px) {
+            body { padding: 30px 15px; }
+            h1 { font-size: 1.6rem; }
+            .lead-text { font-size: 0.95rem; }
+            .content-box { padding: 25px 20px; }
+            h2 { font-size: 1.15rem; padding: 10px; }
+            .emergency-box { padding: 15px; }
+            .message-box { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>みんなで助け合う「体調不良時の連絡」</h1>
+    <p class="lead-text">
+        ウルフでは、チームみんなで助け合いながら、お客様に最高のおもてなしを提供したいと考えています。体調が優れないときは無理をせず、以下のルールに従って早めに連絡をください。
+    </p>
+
+    <div class="content-box">
+        
+        <div class="rule-section">
+            <h2>1. 連絡のタイミング</h2>
+            <div class="emergency-box">
+                <div class="emergency-title">📞 連絡の原則（必ず守ること）</div>
+                <p style="margin: 0; font-size: 1.1rem; line-height: 1.7;">
+                    シフト開始の <span class="highlight">「2時間前まで」</span> に、<br>
+                    必ず店長（三浦さん）へ <span class="highlight">「直接の電話」</span> で連絡してください。
+                </p>
+                <p style="margin: 10px 0 0 0; font-size: 0.9rem; color: #ffcccc; line-height: 1.5;">
+                    ※LINE等のメッセージは、気づかない可能性があるため緊急時を除き不可とします。確実な伝達のため、電話連絡の徹底をお願いします。
+                </p>
+            </div>
+        </div>
+
+        <div class="rule-section">
+            <h2>2. 連絡の内容</h2>
+            <p style="margin-bottom: 15px;">
+                「体調不良の具体的な症状（発熱・腹痛など）」を伝え、出勤が可能かどうかの相談をしてください。
+            </p>
+
+            <div class="alert-box">
+                <div class="alert-title">⚠ 重要：無断欠勤・遅刻の禁止</div>
+                連絡がないまま無断で遅刻・欠勤することは、お店の運営に多大な迷惑をかけるため、<span class="danger-text">厳しく対応</span>します。
+            </div>
+
+            <div class="alert-box" style="background: rgba(255, 165, 0, 0.1); border-left-color: #ffa500;">
+                <div class="alert-title" style="color: #ffb732;">🦠 感染症の疑いがある場合</div>
+                ノロウイルスやインフルエンザなどの疑いがある場合は、シフト直前であっても無理をせず、必ずその旨を報告してください。食を扱うお店として、スタッフの皆さんとお客様の安全を最優先に考えます。
+            </div>
+        </div>
+
+        <div class="rule-section">
+            <h2>3. チームとしての協力（助け合い）</h2>
+            <p style="margin-bottom: 15px;">
+                万が一、どうしても出勤できない場合、可能であればスタッフ同士で「代わりに出られる人」を探す協力をお願いします。
+            </p>
+            <div class="cooperate-box">
+                <strong>💡 一人で抱え込まなくて大丈夫です</strong><br>
+                代わりを探すこと自体が大きな負担になることもあります。<span class="highlight">「代わりを見つけること」は必須の義務ではありません。</span><br>
+                まずは店長へ連絡してください。最終的な調整は店側で行います。
+            </div>
+        </div>
+
+        <div class="message-box">
+            <div class="message-title">＜大切にしていること＞</div>
+            <p style="margin: 0; color: #fff; line-height: 1.6;">
+                無理をして働くと、かえってミスが増えたり、お客様に満足いただけない結果になってしまいます。<br>
+                <span class="highlight">「今日は休んでしっかり治す」というのも、プロとして大切な判断</span>です。<br>
+                お互い様の精神でフォローし合い、みんなが気持ちよく働ける「ウルフ」を一緒に作っていきましょう！
+            </p>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="back-btn">← ウルフのルール一覧に戻る</a>
+
+</body>
+</html>
