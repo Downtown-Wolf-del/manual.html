@@ -5,57 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>下町ウルフ | 研修ポータル</title>
     <style>
-        body { 
-            margin: 0; padding: 20px; font-family: 'Helvetica Neue', sans-serif; text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('2025_10_24_ウルフB-31.jpg');
-            background-size: cover; background-position: center; background-attachment: fixed;
-            color: #fff; min-height: 100vh;
-        }
-        .hero { margin-bottom: 40px; }
+        body { margin: 0; padding: 20px; font-family: sans-serif; text-align: center; color: #fff;
+               background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('2025_10_24_ウルフB-31.jpg');
+               background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh; }
+        .hero { margin-bottom: 30px; }
         h1 { font-size: 2.5rem; color: #c5a059; margin-bottom: 5px; }
-        
-        .container { max-width: 900px; margin: 0 auto; display: grid; gap: 20px; }
-        .card { background: rgba(51, 51, 51, 0.8); padding: 25px; border-radius: 12px; text-decoration: none; color: #fff; transition: 0.3s; border: 1px solid #444; }
-        .card:hover { transform: translateY(-5px); background: #333; }
-        
-        /* 特別バナー（赤基調・鼓動アニメーション） */
-        .summer-banner { 
-            background: #8B0000; border: 2px solid #FFD700; 
-            animation: pulse 2s infinite; padding: 30px;
-        }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(139,0,0,0.7); } 70% { box-shadow: 0 0 0 10px rgba(139,0,0,0); } 100% { box-shadow: 0 0 0 0 rgba(139,0,0,0); } }
-
-        .main-menu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .full-width { grid-column: span 3; }
-        h2 { margin: 0; font-size: 1.3rem; }
+        .container { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+        .card { background: rgba(51, 51, 51, 0.85); padding: 20px; border-radius: 10px; text-decoration: none; color: #fff; transition: 0.3s; border: 1px solid #444; }
+        .card:hover { background: #c5a059; color: #000; }
+        .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .summer-banner { background: #8B0000; border: 2px solid #FFD700; color: #fff; }
+        .summer-banner:hover { background: #a00000; color: #FFD700; }
     </style>
 </head>
 <body>
-
     <div class="hero">
         <h1>下町ウルフ</h1>
         <p>「狸小路で一番の活気を創る」ための研修ポータルサイト</p>
     </div>
 
     <div class="container">
-        <a href="summer-terrace.html" class="card summer-banner">
-            <h2 style="color: #FFD700;">【夏期限定：6-9月】外飲み・テラス席運営マニュアル</h2>
-            <p style="margin: 5px 0 0; font-size: 0.9rem;">狸小路7丁目を熱くする「虎ノ門」戦略と連携ルール</p>
-        </a>
+        <a href="philosophy.html" class="card"><h2>私たちの理念：札幌で一番愛される居酒屋へ</h2></a>
+        <a href="rules/index.html" class="card"><h2>ウルフのルール（労務・働き方のきまり）</h2></a>
 
-        <a href="philosophy.html" class="card full-width" style="background: #c5a059; color: #000;">
-            <h2>私たちの理念：札幌で一番愛される居酒屋へ</h2>
-        </a>
-
-        <a href="rules/index.html" class="card full-width" style="border: 1px solid #1e3c72; background: rgba(30, 60, 114, 0.6);">
-            <h2>ウルフのルール（労務・働き方のきまり）</h2>
-        </a>
-
-        <div class="main-menu">
+        <div class="menu-grid">
             <a href="hall/index.html" class="card"><h2>ホール</h2></a>
             <a href="kitchen/index.html" class="card"><h2>キッチン</h2></a>
             <a href="counter/index.html" class="card"><h2>カウンター</h2></a>
         </div>
+
+        <a href="summer-terrace.html" class="card summer-banner">
+            <h2>【夏期限定：6-9月】外飲み・テラス席運営マニュアル</h2>
+            <p style="font-size: 0.9rem; margin-top: 5px;">狸小路7丁目を熱くする「虎ノ門」戦略と連携ルール</p>
+        </a>
     </div>
 </body>
 </html>
