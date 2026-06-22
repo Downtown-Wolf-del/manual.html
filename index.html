@@ -2,64 +2,60 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>下町ウルフ | 研修ポータル</title>
     <style>
         body { 
-            margin: 0; 
-            padding: 50px; 
-            font-family: 'Helvetica Neue', sans-serif; 
-            text-align: center; 
-            /* 背景画像の設定 */
-            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('2025_10_24_ウルフB-31.jpg');
-            background-size: cover; 
-            background-position: center; 
-            background-attachment: fixed;
-            color: #fff; 
-            min-height: 100vh;
+            margin: 0; padding: 20px; font-family: 'Helvetica Neue', sans-serif; text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('2025_10_24_ウルフB-31.jpg');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            color: #fff; min-height: 100vh;
         }
+        .hero { margin-bottom: 40px; }
+        h1 { font-size: 2.5rem; color: #c5a059; margin-bottom: 5px; }
         
-        h1 { font-size: 3rem; color: #c5a059; margin-bottom: 10px; }
-        .hero { margin-bottom: 50px; border-bottom: 2px solid #c5a059; padding-bottom: 20px; }
-        .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 900px; margin: 0 auto; }
-        .card { background: rgba(51, 51, 51, 0.8); padding: 30px; border-radius: 15px; text-decoration: none; color: #fff; transition: 0.3s; }
-        .card:hover { background: #c5a059; color: #000; transform: translateY(-10px); }
-        h2 { margin: 0; font-size: 1.5rem; }
+        .container { max-width: 900px; margin: 0 auto; display: grid; gap: 20px; }
+        .card { background: rgba(51, 51, 51, 0.8); padding: 25px; border-radius: 12px; text-decoration: none; color: #fff; transition: 0.3s; border: 1px solid #444; }
+        .card:hover { transform: translateY(-5px); background: #333; }
+        
+        /* 特別バナー（赤基調・鼓動アニメーション） */
+        .summer-banner { 
+            background: #8B0000; border: 2px solid #FFD700; 
+            animation: pulse 2s infinite; padding: 30px;
+        }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(139,0,0,0.7); } 70% { box-shadow: 0 0 0 10px rgba(139,0,0,0); } 100% { box-shadow: 0 0 0 0 rgba(139,0,0,0); } }
 
-        /* 【新設】ウルフのルール専用のカード（信頼感・安心感のあるディープブルー） */
-        .card-rule {
-            grid-column: span 3;
-            background: linear-gradient(45deg, #1e3c72, #2a5298);
-            border: 2px solid #fff;
-            box-shadow: 0 0 15px rgba(30, 60, 114, 0.4);
-        }
-        .card-rule:hover {
-            background: #fff;
-            color: #1e3c72;
-        }
+        .main-menu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .full-width { grid-column: span 3; }
+        h2 { margin: 0; font-size: 1.3rem; }
     </style>
 </head>
 <body>
+
     <div class="hero">
         <h1>下町ウルフ</h1>
         <p>「狸小路で一番の活気を創る」ための研修ポータルサイト</p>
     </div>
 
-    <div class="menu-grid">
-        <a href="philosophy.html" class="card" style="grid-column: span 3; background: #c5a059; color: #000;">
-            <h2>札幌で一番愛される居酒屋を目指して</h2>
-            <p>私たちの理念と目指すべき未来</p>
+    <div class="container">
+        <a href="summer-terrace.html" class="card summer-banner">
+            <h2 style="color: #FFD700;">【夏期限定：6-9月】外飲み・テラス席運営マニュアル</h2>
+            <p style="margin: 5px 0 0; font-size: 0.9rem;">狸小路7丁目を熱くする「虎ノ門」戦略と連携ルール</p>
         </a>
 
-        <a href="rules/index.html" class="card card-rule">
+        <a href="philosophy.html" class="card full-width" style="background: #c5a059; color: #000;">
+            <h2>私たちの理念：札幌で一番愛される居酒屋へ</h2>
+        </a>
+
+        <a href="rules/index.html" class="card full-width" style="border: 1px solid #1e3c72; background: rgba(30, 60, 114, 0.6);">
             <h2>ウルフのルール（労務・働き方のきまり）</h2>
-            <p style="margin: 5px 0 0 0; font-size: 0.95rem; opacity: 0.9; line-height: 1.5;">
-                シフト提出・タイムカード・体調不良の連絡・まかない・身だしなみの基準・出勤する際の必要なもの
-            </p>
         </a>
 
-        <a href="hall/index.html" class="card"><h2>ホール</h2></a>
-        <a href="kitchen/index.html" class="card"><h2>キッチン</h2></a>
-        <a href="counter/index.html" class="card"><h2>カウンター</h2></a>
+        <div class="main-menu">
+            <a href="hall/index.html" class="card"><h2>ホール</h2></a>
+            <a href="kitchen/index.html" class="card"><h2>キッチン</h2></a>
+            <a href="counter/index.html" class="card"><h2>カウンター</h2></a>
+        </div>
     </div>
 </body>
 </html>
