@@ -1,6 +1,58 @@
-<!-- terrace/index.html の中身 -->
-<div class="menu-grid">
-    <a href="strategy.html" class="card"><h2>第1部：【戦略・マインド】</h2></a>
-    <a href="operation.html" class="card"><h2>第2部：【運用・戦術】</h2></a>
-    <a href="cooperation.html" class="card"><h2>第3部：【連携・守り】</h2></a>
-</div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テラス席運営マニュアル | 下町ウルフ</title>
+    <style>
+        body { 
+            margin: 0; padding: 50px; font-family: 'Helvetica Neue', sans-serif; text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../2025_10_24_ウルフB-31.jpg');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            color: #fff; min-height: 100vh;
+        }
+        h1 { font-size: 2.5rem; color: #c5a059; margin-bottom: 50px; }
+        
+        .menu-grid { 
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; 
+            max-width: 800px; margin: 0 auto; 
+        }
+        
+        /* 画像のルールページに合わせたブルーのボタンデザイン */
+        .btn-card {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            padding: 40px 20px; border-radius: 10px; text-decoration: none;
+            color: #fff; transition: 0.3s; border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        .btn-card:hover { background: #fff; color: #1e3c72; transform: translateY(-5px); }
+        
+        h2 { margin: 0; font-size: 1.5rem; }
+        
+        .back-btn {
+            display: inline-block; margin-top: 50px; padding: 10px 30px;
+            border: 1px solid #fff; border-radius: 50px; text-decoration: none;
+            color: #fff; transition: 0.3s;
+        }
+        .back-btn:hover { background: #fff; color: #000; }
+    </style>
+</head>
+<body>
+
+    <h1>外飲み・テラス席運営マニュアル</h1>
+
+    <div class="menu-grid">
+        <a href="strategy.html" class="btn-card">
+            <h2>第1部：戦略・マインド</h2>
+        </a>
+        <a href="operation.html" class="btn-card">
+            <h2>第2部：運用・戦術</h2>
+        </a>
+        <a href="cooperation.html" class="btn-card" style="grid-column: span 2;">
+            <h2>第3部：連携・守り</h2>
+        </a>
+    </div>
+
+    <a href="../index.html" class="back-btn">← 研修ポータルに戻る</a>
+
+</body>
+</html>
